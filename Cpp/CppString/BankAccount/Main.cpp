@@ -1,6 +1,7 @@
 #include <iostream>
 
-class Account {
+class Account
+{
 public:
 	Account(int id, const char* name, int balance)
 		: id(id), balance(balance)
@@ -9,7 +10,24 @@ public:
 		this->name = new char[length];
 		strcpy_s(this->name, length, name);
 	}
-	void Deposit(int balance)
+	Account(const Account& account) // 복사생성자.
+	{
+		id = account.id;
+		balance = account.balance;
+
+		// 깊은복사
+		size_t length = strlen(account.name) + 1;
+		this->name = new char[length];
+		strcpy_s(this->name, length, account.name);
+	}
+	virtual ~Account()
+	{
+		if (name != nullptr)
+		{
+			delete[] name;
+		}
+	}
+	virtual void Deposit(int balance)
 	{
 		if (balance <= 0)
 		{
@@ -23,7 +41,7 @@ public:
 			this->balance += balance;
 		}
 	}
-	void Withdraw(int balance)
+	virtual void Withdraw(int balance)
 	{
 		if (balance <= 0)
 		{
@@ -41,25 +59,75 @@ public:
 			else
 			{
 				this->balance -= balance;
-				std::cout << "잔액 : " << this->balance <<"\n";
+				std::cout << "잔액 : " << this->balance << "\n";
 			}
 		}
 	}
-	void Print()
+	virtual void Print()
 	{
 		std::cout << "계좌번호 : " << id << "  이름 : " << name << "  잔액 : " << balance << "\n";
 	}
 private:
-	int id;			// 계좌번호
-	char* name;		// 이름
-	int balance;	// 잔액
+	int id;				// 계좌번호
+	char* name{};		// 이름
+	int balance;		// 잔액
 };
 
-class Bank {
+class CreditAccount : public Account
+{
 public:
+	virtual void Deposit(int balance) override
+	{
+
+	}
+	virtual void Withdraw(int balance) override
+	{
+
+	}
+	virtual void Print() override
+	{
+
+	}
+
+};
+
+class DonationAccount : public Account
+{
+public:
+	virtual void Deposit(int balance) override
+	{
+
+	}
+	virtual void Withdraw(int balance) override
+	{
+
+	}
+	virtual void Print() override
+	{
+
+	}
+private:
+	int donation;
+};
+
+class Bank
+{
+public:
+	~Bank()
+	{
+		for (Account* account : accounts)
+		{
+			if (account != nullptr)
+			{
+				delete account;
+			}
+		}
+	}
 	void CreateAccount(const char* name, int balance)
 	{
 		accounts[lastNum] = new Account(lastNum, name, balance);
+		accounts[lastNum]->Print();
+		std::cout << "계좌가 개설되었습니다.\n";
 		++lastNum;
 	}
 	void Deposit(int id, int balance)
@@ -70,6 +138,7 @@ public:
 			return;
 		}
 		accounts[id]->Deposit(balance);
+		accounts[id]->Print();
 	}
 	void Withdraw(int id, int balance)
 	{
@@ -79,16 +148,20 @@ public:
 			return;
 		}
 		accounts[id]->Withdraw(balance);
+		accounts[id]->Print();
 	}
 	void Inquire()
 	{
 		for (Account* account : accounts)
 		{
+			if (account == nullptr) continue;
 			account->Print();
 		}
 	}
 private:
-	Account* accounts[100];
+	class Account* accounts[100]{};
+	class CreditAccount* creditAccounts[100]{};
+	class DonationAccount* donationAccounts[100]{};
 	int lastNum = 0;
 };
 
@@ -96,12 +169,12 @@ void Loop()
 {
 	Bank bank;
 	char input;
-	char* name = new char[100];
+	char* name{};
 	int id;
 	int balance;
 	while (true)
 	{
-		std::cout << "1. 계좌 개설  2. 입금  3. 출금  4. 전체 고객 잔액 조회\n";
+		std::cout << "1.계좌 개설  2.입금  3.출금  4.전체 고객 잔액 조회\n";
 		std::cin >> input;
 		if (input == 'q' || input == 'Q')
 		{
@@ -129,7 +202,7 @@ void Loop()
 			std::cin >> id;
 			std::cout << "출금할 금액을 입력해주세요.\n";
 			std::cin >> balance;
-			bank.Deposit(id, balance);
+			bank.Withdraw(id, balance);
 		}
 		else if (input == '4')			// 전체 고객 잔액 조회
 		{
@@ -140,10 +213,15 @@ void Loop()
 			std::cout << "다시 입력해주세요.\n";
 		}
 	}
+	if (name != nullptr)
+	{
+		delete[] name;
+	}
 }
 
 
-int main() {
+int main()
+{
 	Loop();
 
 	std::cin.get();
