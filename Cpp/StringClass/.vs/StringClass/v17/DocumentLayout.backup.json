@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|solutionrelative:Demo\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|solutionrelative:Demo\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|solutionrelative:Demo\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FE8278D5-944E-400A-AA86-3D484BFFD7EB}|Demo\\Demo.vcxproj|solutionrelative:Demo\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "String.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.cpp",
               "RelativeDocumentMoniker": "Demo\\String.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.cpp",
               "RelativeToolTip": "Demo\\String.cpp",
-              "ViewState": "AgIAABoAAAAAAAAAAAApwDEAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T07:24:44.834Z",
               "EditorCaption": ""
@@ -45,20 +45,20 @@
               "RelativeDocumentMoniker": "Demo\\Main.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\Main.cpp",
               "RelativeToolTip": "Demo\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T07:24:13.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "String.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.h",
               "RelativeDocumentMoniker": "Demo\\String.h",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\StringClass\\Demo\\String.h",
               "RelativeToolTip": "Demo\\String.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-27T07:24:05.263Z",
               "EditorCaption": ""

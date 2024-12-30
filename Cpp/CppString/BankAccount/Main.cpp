@@ -26,8 +26,16 @@ public:
 		{
 			delete[] name;
 		}
+		if (creditAccount != nullptr)
+		{
+			delete creditAccount;
+		}
+		if (donationAccount != nullptr)
+		{
+			delete donationAccount;
+		}
 	}
-	virtual void Deposit(int balance)
+	virtual void Deposit(float balance)
 	{
 		if (balance <= 0)
 		{
@@ -66,37 +74,30 @@ public:
 	virtual void Print()
 	{
 		std::cout << "계좌번호 : " << id << "  이름 : " << name << "  잔액 : " << balance << "\n";
+		if (creditAccount)
+		{
+
+		}
+		if (donationAccount)
+		{
+
+		}
 	}
 private:
 	int id;				// 계좌번호
 	char* name{};		// 이름
-	int balance;		// 잔액
+	float balance;		// 잔액
+	bool highCredit;	// 신용 등급 만족.
+	CreditAccount* creditAccount{};
+	DonationAccount* donationAccount{};
 };
 
 class CreditAccount : public Account
 {
 public:
-	virtual void Deposit(int balance) override
+	virtual void Deposit(float balance) override
 	{
-
-	}
-	virtual void Withdraw(int balance) override
-	{
-
-	}
-	virtual void Print() override
-	{
-
-	}
-
-};
-
-class DonationAccount : public Account
-{
-public:
-	virtual void Deposit(int balance) override
-	{
-
+		interest += balance * interestRate;
 	}
 	virtual void Withdraw(int balance) override
 	{
@@ -107,7 +108,28 @@ public:
 
 	}
 private:
-	int donation;
+	float interest;
+	float interestRate = 0.01f;
+};
+
+class DonationAccount : public Account
+{
+public:
+	virtual void Deposit(float balance) override
+	{
+		donation += balance * donationRate;
+	}
+	virtual void Withdraw(int balance) override
+	{
+
+	}
+	virtual void Print() override
+	{
+		
+	}
+private:
+	float donation;
+	float donationRate = 0.01f;
 };
 
 class Bank
@@ -123,14 +145,14 @@ public:
 			}
 		}
 	}
-	void CreateAccount(const char* name, int balance)
+	void CreateAccount(const char* name, float balance)
 	{
 		accounts[lastNum] = new Account(lastNum, name, balance);
 		accounts[lastNum]->Print();
 		std::cout << "계좌가 개설되었습니다.\n";
 		++lastNum;
 	}
-	void Deposit(int id, int balance)
+	void Deposit(int id, float balance)
 	{
 		if (accounts[id] == nullptr)
 		{
@@ -140,7 +162,7 @@ public:
 		accounts[id]->Deposit(balance);
 		accounts[id]->Print();
 	}
-	void Withdraw(int id, int balance)
+	void Withdraw(int id, float balance)
 	{
 		if (accounts[id] == nullptr)
 		{
@@ -160,8 +182,8 @@ public:
 	}
 private:
 	class Account* accounts[100]{};
-	class CreditAccount* creditAccounts[100]{};
-	class DonationAccount* donationAccounts[100]{};
+	//class CreditAccount* creditAccounts[100]{};
+	//class DonationAccount* donationAccounts[100]{};
 	int lastNum = 0;
 };
 
