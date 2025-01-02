@@ -42,8 +42,7 @@
               "RelativeToolTip": "Program\\Account.cpp",
               "ViewState": "AgIAADYAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T05:32:15.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T05:32:15.463Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Program\\Account.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T05:29:56.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T05:29:56.485Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,7 @@
               "RelativeToolTip": "Program\\Bank.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T05:29:15.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T05:29:15.131Z"
             },
             {
               "$type": "Document",
@@ -81,8 +78,7 @@
               "RelativeToolTip": "Program\\Bank.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T05:27:59.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T05:27:59.814Z"
             },
             {
               "$type": "Document",
@@ -92,7 +88,7 @@
               "RelativeDocumentMoniker": "Program\\Main.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\AccountManager\\Program\\Main.cpp",
               "RelativeToolTip": "Program\\Main.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEQAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-02T05:13:10.587Z",
               "EditorCaption": ""
