@@ -3,7 +3,7 @@
 int main()
 {
 	
-	const char* message = "C 표준 라이브러리로 생성한 텍스트.";		// 파일에 추가할 문자열.
+	const char* message = "C 표준 라이브러리로 생성한 텍스트.\n";		// 파일에 추가할 문자열.
 
 
 	FILE* file = nullptr;											// 파일 스트림 객체 선언.

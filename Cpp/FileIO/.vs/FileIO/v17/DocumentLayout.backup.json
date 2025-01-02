@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{515169FE-B5F2-4891-9B57-15594BEE094B}|Move\\Move.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\Move\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{515169FE-B5F2-4891-9B57-15594BEE094B}|Move\\Move.vcxproj|solutionrelative:Move\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66ED6983-EED0-44DC-B14F-126FEBCC3965}|FileRead\\FileRead.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FileRead\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{66ED6983-EED0-44DC-B14F-126FEBCC3965}|FileRead\\FileRead.vcxproj|solutionrelative:FileRead\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74FFFD57-073C-401A-B546-3483530F5B70}|FileWrite\\FileWrite.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FileWrite\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{74FFFD57-073C-401A-B546-3483530F5B70}|FileWrite\\FileWrite.vcxproj|solutionrelative:FileWrite\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C3F22B-1A5D-4687-A326-D848BBC4D194}|FSeek\\FSeek.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FSeek\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{16C3F22B-1A5D-4687-A326-D848BBC4D194}|FSeek\\FSeek.vcxproj|solutionrelative:FSeek\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,18 +32,44 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\Move\\Main.cpp",
+              "RelativeDocumentMoniker": "Move\\Main.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\Move\\Main.cpp",
+              "RelativeToolTip": "Move\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-02T03:37:35.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FSeek\\Main.cpp",
+              "RelativeDocumentMoniker": "FSeek\\Main.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FSeek\\Main.cpp",
+              "RelativeToolTip": "FSeek\\Main.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-02T01:37:12.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FileRead\\Main.cpp",
               "RelativeDocumentMoniker": "FileRead\\Main.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FileRead\\Main.cpp",
               "RelativeToolTip": "FileRead\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-30T06:11:39.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\FileIO\\FileWrite\\Main.cpp",
               "RelativeDocumentMoniker": "FileWrite\\Main.cpp",

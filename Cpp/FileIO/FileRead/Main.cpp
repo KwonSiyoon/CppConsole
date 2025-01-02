@@ -17,13 +17,13 @@ int main()
 		// feof() 파일을 다룰 때 현재 위치가 어디인지 알려주는 함수.
 		while (!feof(file))						// 파일을 끝까지 읽으면 true 반환
 		{
-			/*if (fgets(buffer, 4, file) == nullptr)
+			if (fgets(buffer, 256, file) != nullptr)
 			{
-				break;
-			}*/
-			fgets(buffer, 256, file);
+				std::cout << buffer;			// 출력.
+			}
+			//fgets(buffer, 256, file);
 
-			std::cout << buffer;				// 출력.
+							
 		}
 
 		fclose(file);							// 파일 닫기.
