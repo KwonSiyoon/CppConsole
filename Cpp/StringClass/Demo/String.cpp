@@ -66,6 +66,7 @@ const char* String::Data() const
 	return data;
 }
 
+// private 변수에 접근하려고 할 때 오류나므로 함수선언시 friend 붙이면 가능.
 std::ostream& operator<<(std::ostream& os, const String& string)
 {
 	os << string.data;

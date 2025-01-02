@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{326A5FD5-0A69-4644-AA80-144D285BE5F6}|ClassTemplate\\ClassTemplate.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\ClassTemplate\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{326A5FD5-0A69-4644-AA80-144D285BE5F6}|ClassTemplate\\ClassTemplate.vcxproj|solutionrelative:ClassTemplate\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C372A6EF-2B69-4C17-A1A0-66DD2C05B9A2}|DynamicCast\\DynamicCast.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\DynamicCast\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C372A6EF-2B69-4C17-A1A0-66DD2C05B9A2}|DynamicCast\\DynamicCast.vcxproj|solutionrelative:DynamicCast\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD6432F-2DA2-45B1-83E8-635516052CFB}|Template\\Template.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\Template\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1DD6432F-2DA2-45B1-83E8-635516052CFB}|Template\\Template.vcxproj|solutionrelative:Template\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\ClassTemplate\\Main.cpp",
+              "RelativeDocumentMoniker": "ClassTemplate\\Main.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\ClassTemplate\\Main.cpp",
+              "RelativeToolTip": "ClassTemplate\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-30T05:18:47.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\Template\\Main.cpp",
+              "RelativeDocumentMoniker": "Template\\Main.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\Template\\Main.cpp",
+              "RelativeToolTip": "Template\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-30T02:47:42.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\DynamicCast\\Main.cpp",
+              "RelativeDocumentMoniker": "DynamicCast\\Main.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\Casting\\DynamicCast\\Main.cpp",
+              "RelativeToolTip": "DynamicCast\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-30T01:29:34.755Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

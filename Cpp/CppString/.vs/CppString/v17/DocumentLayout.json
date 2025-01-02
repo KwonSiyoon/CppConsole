@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\",
+  "WorkspaceRootPath": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\CppString\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DADCBAD3-2462-481D-AA8A-AC6726FF49F6}|BankAccount\\BankAccount.vcxproj|C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\BankAccount\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{DADCBAD3-2462-481D-AA8A-AC6726FF49F6}|BankAccount\\BankAccount.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\CppString\\BankAccount\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DADCBAD3-2462-481D-AA8A-AC6726FF49F6}|BankAccount\\BankAccount.vcxproj|solutionrelative:BankAccount\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E195427-FE0B-4EA6-AB12-08E4E1C92A7E}|4.ClassAndArray\\4.ClassAndArray.vcxproj|C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\4.ClassAndArray\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3E195427-FE0B-4EA6-AB12-08E4E1C92A7E}|4.ClassAndArray\\4.ClassAndArray.vcxproj|solutionrelative:4.ClassAndArray\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5F83A0B-173F-455C-B21C-0B058DA3AFC3}|5.CopyConstructor\\5.CopyConstructor.vcxproj|C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\5.CopyConstructor\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B5F83A0B-173F-455C-B21C-0B058DA3AFC3}|5.CopyConstructor\\5.CopyConstructor.vcxproj|solutionrelative:5.CopyConstructor\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{328BB122-07FE-47EF-AFF9-C6DBA34217BF}|3.Calculator\\3.Calculator.vcxproj|C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\3.Calculator\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{328BB122-07FE-47EF-AFF9-C6DBA34217BF}|3.Calculator\\3.Calculator.vcxproj|solutionrelative:3.Calculator\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44EF3772-9EEC-4526-B58D-1A9E179E68C5}|CppClassBasic\\CppClassBasic.vcxproj|C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\CppClassBasic\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{44EF3772-9EEC-4526-B58D-1A9E179E68C5}|CppClassBasic\\CppClassBasic.vcxproj|solutionrelative:CppClassBasic\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32AFAABD-1456-4C89-8C7A-E86D9FFD282F}|CppString\\CppString.vcxproj|C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\CppString\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{32AFAABD-1456-4C89-8C7A-E86D9FFD282F}|CppString\\CppString.vcxproj|solutionrelative:CppString\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,80 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\5.CopyConstructor\\Main.cpp",
-              "RelativeDocumentMoniker": "5.CopyConstructor\\Main.cpp",
-              "ToolTip": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\5.CopyConstructor\\Main.cpp",
-              "RelativeToolTip": "5.CopyConstructor\\Main.cpp",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-26T07:05:38.033Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\BankAccount\\Main.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\CppString\\BankAccount\\Main.cpp",
               "RelativeDocumentMoniker": "BankAccount\\Main.cpp",
-              "ToolTip": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\BankAccount\\Main.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\CppString\\BankAccount\\Main.cpp",
               "RelativeToolTip": "BankAccount\\Main.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowFEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-26T06:42:17.357Z",
+              "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\4.ClassAndArray\\Main.cpp",
-              "RelativeDocumentMoniker": "4.ClassAndArray\\Main.cpp",
-              "ToolTip": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\4.ClassAndArray\\Main.cpp",
-              "RelativeToolTip": "4.ClassAndArray\\Main.cpp",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-26T05:51:12.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\3.Calculator\\Main.cpp",
-              "RelativeDocumentMoniker": "3.Calculator\\Main.cpp",
-              "ToolTip": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\3.Calculator\\Main.cpp",
-              "RelativeToolTip": "3.Calculator\\Main.cpp",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwDUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-26T05:26:17.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\CppClassBasic\\Main.cpp",
-              "RelativeDocumentMoniker": "CppClassBasic\\Main.cpp",
-              "ToolTip": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\CppClassBasic\\Main.cpp",
-              "RelativeToolTip": "CppClassBasic\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-26T03:10:04.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\CppString\\Main.cpp",
-              "RelativeDocumentMoniker": "CppString\\Main.cpp",
-              "ToolTip": "C:\\Users\\c\\Desktop\\Fork\\CppConsole\\Cpp\\CppString\\CppString\\Main.cpp",
-              "RelativeToolTip": "CppString\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-26T01:57:37.374Z"
             }
           ]
         }
