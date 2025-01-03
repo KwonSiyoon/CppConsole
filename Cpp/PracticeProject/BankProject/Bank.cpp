@@ -1,6 +1,6 @@
 #include "Bank.h"
 #include "Account.h"
-
+#include <iostream>
 
 Bank::Bank()
 {
@@ -17,7 +17,7 @@ Bank::~Bank()
 	}
 }
 
-void Bank::CreateAccount(const char* name, float money)
+void Bank::CreateAccount(const char* name, int money)
 {
 	accounts[lastNum] = new Account(lastNum, name, money);
 	accounts[lastNum]->Print();
@@ -25,7 +25,7 @@ void Bank::CreateAccount(const char* name, float money)
 	++lastNum;
 }
 
-void Bank::Deposit(int id, float money)
+void Bank::Deposit(int id, int money)
 {
 	if (accounts[id] == nullptr)
 	{
@@ -36,7 +36,7 @@ void Bank::Deposit(int id, float money)
 	accounts[id]->Print();
 }
 
-void Bank::Withdraw(int id, float money)
+void Bank::Withdraw(int id, int money)
 {
 	if (accounts[id] == nullptr)
 	{

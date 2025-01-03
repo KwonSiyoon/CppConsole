@@ -5,9 +5,9 @@ class Bank
 public:
 	Bank();
 	~Bank();
-	void CreateAccount(const char* name, float money);
-	void Deposit(int id, float money);
-	void Withdraw(int id, float money);
+	void CreateAccount(const char* name, int money);
+	void Deposit(int id, int money);
+	void Withdraw(int id, int money);
 	void Inquire();
 private:
 	class Account* accounts[100]{};

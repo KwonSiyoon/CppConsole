@@ -1,7 +1,16 @@
 #include "Account.h"
+#include "CreditAccount.h"
+#include "DonationAccount.h"
+#include <iostream>
+
+
+Account::Account()
+	: Account(id, name, balance)
+{
+}
 
 Account::Account(int id, const char* name, int money)
-	: id(id), balance(money)
+	: id(id), balance(money), highCredit(false)
 {
 	size_t length = strlen(name) + 1;
 	this->name = new char[length];
@@ -12,6 +21,7 @@ Account::Account(const Account& account)
 {
 	id = account.id;
 	balance = account.balance;
+	highCredit = account.highCredit;
 
 	// ±Ì¿∫∫πªÁ
 	size_t length = strlen(account.name) + 1;
@@ -35,7 +45,7 @@ Account::~Account()
 	}
 }
 
-void Account::Deposit(float money)
+void Account::Deposit(int money)
 {
 	if (money <= 0)
 	{
@@ -47,6 +57,13 @@ void Account::Deposit(float money)
 	else
 	{
 		this->balance += money;
+		if (highCredit)
+		{
+			if (creditAccount == nullptr)
+			{
+				creditAccount = new CreditAccount();
+			}
+		}
 	}
 }
 
@@ -78,10 +95,10 @@ void Account::Print()
 	std::cout << "∞Ë¡¬π¯»£ : " << id << "  ¿Ã∏ß : " << name << "  ¿‹æ◊ : " << balance << "\n";
 	if (creditAccount)
 	{
-
+		creditAccount->Print();
 	}
 	if (donationAccount)
 	{
-
+		donationAccount->Print();
 	}
 }
