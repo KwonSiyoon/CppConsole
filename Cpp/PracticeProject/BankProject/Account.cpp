@@ -5,12 +5,12 @@
 
 
 Account::Account()
-	: Account(id, name, balance)
+	: Account(0, nullptr, 0)
 {
 }
 
 Account::Account(int id, const char* name, int money)
-	: id(id), balance(money), highCredit(false)
+	: id(id), balance(money), name(nullptr)
 {
 	size_t length = strlen(name) + 1;
 	this->name = new char[length];
@@ -21,7 +21,6 @@ Account::Account(const Account& account)
 {
 	id = account.id;
 	balance = account.balance;
-	highCredit = account.highCredit;
 
 	// ±íÀºº¹»ç
 	size_t length = strlen(account.name) + 1;
@@ -34,14 +33,6 @@ Account::~Account()
 	if (name != nullptr)
 	{
 		delete[] name;
-	}
-	if (creditAccount != nullptr)
-	{
-		delete creditAccount;
-	}
-	if (donationAccount != nullptr)
-	{
-		delete donationAccount;
 	}
 }
 
@@ -57,13 +48,6 @@ void Account::Deposit(int money)
 	else
 	{
 		this->balance += money;
-		if (highCredit)
-		{
-			if (creditAccount == nullptr)
-			{
-				creditAccount = new CreditAccount();
-			}
-		}
 	}
 }
 
@@ -93,12 +77,4 @@ void Account::Withdraw(int money)
 void Account::Print()
 {
 	std::cout << "°èÁÂ¹øÈ£ : " << id << "  ÀÌ¸§ : " << name << "  ÀÜ¾× : " << balance << "\n";
-	if (creditAccount)
-	{
-		creditAccount->Print();
-	}
-	if (donationAccount)
-	{
-		donationAccount->Print();
-	}
 }
