@@ -14,6 +14,11 @@ DonationAccount::DonationAccount(int id, const char* name, int money)
 
 DonationAccount::~DonationAccount()
 {
+	if (name != nullptr)
+	{
+		delete[] name;
+		name = nullptr;
+	}
 }
 
 void DonationAccount::Deposit(int money)

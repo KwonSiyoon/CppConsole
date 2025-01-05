@@ -14,6 +14,11 @@ CreditAccount::CreditAccount(int id, const char* name, int money)
 
 CreditAccount::~CreditAccount()
 {
+	if (name != nullptr)
+	{
+		delete[] name;
+		name = nullptr;
+	}
 }
 
 void CreditAccount::Deposit(int money)

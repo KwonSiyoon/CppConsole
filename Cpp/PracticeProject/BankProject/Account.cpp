@@ -33,6 +33,7 @@ Account::~Account()
 	if (name != nullptr)
 	{
 		delete[] name;
+		name = nullptr;
 	}
 }
 

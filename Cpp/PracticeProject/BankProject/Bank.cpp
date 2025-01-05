@@ -15,6 +15,7 @@ Bank::~Bank()
 		if (account != nullptr)
 		{
 			delete account;
+			account = nullptr;
 		}
 	}
 }
