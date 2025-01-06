@@ -5,16 +5,17 @@ void Loop()
 {
 	Bank bank;
 	char input;
-	char* name{};
+	char* name = new char[100];
 	int id;
 	int money;
 	ACCOUNT_TYPE type;
 	while (true)
 	{
 		std::cout << "1. 일반 계좌  2. 신용 계좌  3. 기부 계좌\n";
-		std::cin >> input;
+		
 		while (true)
 		{
+			std::cin >> input;
 			if (input == '1')
 			{
 				type = ACCOUNT_TYPE::ACCOUNT;
@@ -30,6 +31,10 @@ void Loop()
 				type = ACCOUNT_TYPE::DONATION_ACCOUNT;
 				break;
 			}
+			else if (input == 'q' || input == 'Q')
+			{
+				return;
+			}
 			else
 			{
 				std::cout << "다시 입력해주세요.\n";
@@ -40,9 +45,9 @@ void Loop()
 		std::cin >> input;
 		if (input == 'q' || input == 'Q')
 		{
-			break;
+			return;
 		}
-		if (input == '1')				// 계좌 개설
+		else if (input == '1')				// 계좌 개설
 		{
 			std::cout << "이름을 입력해주세요.\n";
 			std::cin >> name;

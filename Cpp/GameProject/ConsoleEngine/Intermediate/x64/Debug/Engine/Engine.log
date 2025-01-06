@@ -1,7 +1,12 @@
-﻿  PreCompiledHeader.cpp
-  Actor.cpp
-  Engine.cpp
-  Level.cpp
-  Main.cpp
-  코드를 생성하고 있습니다...
+﻿  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Core.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\RTTI.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Actor\Actor.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Engine\Engine.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Level\Level.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\PreCompiledHeader\PreCompiledHeader.h
+  6개 파일이 복사되었습니다.
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.dll
+  1개 파일이 복사되었습니다.
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.lib
+  1개 파일이 복사되었습니다.
   Engine.vcxproj -> C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.dll

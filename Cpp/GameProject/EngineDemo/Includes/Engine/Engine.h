@@ -1,11 +1,13 @@
 #pragma once
-#include "PreCompiledHeader.h"
+
+#include "Core.h"
 
 struct KeyState										// 입력 처리를 위한 구조체.
 {
 	bool isKeyDown = false;							// 현재 프레임에 키가 눌렸는지 확인.
 	bool wasKeyDown = false;						// 이전 프레임에 키가 눌렸었는지 확인.
 };
+
 
 class Level;
 class ENGINE_API Engine										// 엔진 클래스.

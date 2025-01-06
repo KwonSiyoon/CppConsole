@@ -31,6 +31,6 @@ void SafeDelete(T* pointer)
 #if ENGINE_BUILD_DLL
 #define	ENGINE_API __declspec(dllexport)
 #else
-#define	ENGINE_API __declspec(dllexport)
+#define	ENGINE_API __declspec(dllimport)
 #endif
 

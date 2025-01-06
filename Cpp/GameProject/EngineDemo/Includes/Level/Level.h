@@ -1,5 +1,6 @@
 #pragma once
-#include "PreCompiledHeader.h"
+#include "Core.h"
+
 
 class Actor;				// 전방 선언
 class ENGINE_API Level
