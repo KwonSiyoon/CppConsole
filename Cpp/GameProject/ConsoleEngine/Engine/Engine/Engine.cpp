@@ -11,6 +11,7 @@ Engine::Engine()
 	: quit(false), mainLevel(nullptr)
 {
 	instance = this;									// 싱글톤 객체 설정.
+	SetTargetFrameRate(60.0f);							// 기본 타겟 프레임 속도 설정.
 }
 
 Engine::~Engine()
@@ -43,9 +44,9 @@ void Engine::Run()
 	//__int64 previousTime = 0;
 	int64_t previousTime = 0;
 
-	float targetFrameRate = 60.01f;								// 프레임 제한.
+	//float targetFrameRate = 60.01f;								// 프레임 제한.
 
-	float targetOneFrameTime = 1.0f / targetFrameRate;			// 한 프레임 시간 계산.
+	//float targetOneFrameTime = 1.0f / targetFrameRate;			// 한 프레임 시간 계산.
 
 	
 
@@ -61,6 +62,8 @@ void Engine::Run()
 		currentTime = time.QuadPart;
 
 		float deltaTime = static_cast<float>(currentTime - previousTime) / static_cast<float>(frequency.QuadPart);
+		
+		//float targetOneFrameTime = 1.0f / targetFrameRate;			// 한 프레임 시간 계산.
 
 		if (deltaTime >= targetOneFrameTime)					// 프레임 확인.
 		{
@@ -84,6 +87,52 @@ void Engine::LoadLevel(Level* newLevel)
 
 	// 메인 레벨 설정.
 	mainLevel = newLevel;
+}
+
+void Engine::SetCursorType(CursorType cursorType)
+{
+	// 1. 커서 속성 구조체 설정.
+	CONSOLE_CURSOR_INFO info = {};
+
+	// 타입 별로 구조체 값 설정.
+	switch (cursorType)
+	{
+	case CursorType::NoCursor:
+		info.dwSize = 1;
+		info.bVisible = FALSE;
+		break;
+	case CursorType::SolidCursor:
+		info.dwSize = 100;
+		info.bVisible = TRUE;
+		break;
+	case CursorType::NormalCursor:
+		info.dwSize = 20;
+		info.bVisible = TRUE;
+		break;
+	default:
+		break;
+	}
+
+	// 2. 설정.
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+}
+
+void Engine::SetCursorPosition(const Vector2& position)
+{
+	SetCursorPosition(position.x, position.y);
+}
+
+void Engine::SetCursorPosition(int x, int y)						// 콘솔에 글자의 위치를 정해주는 함수.
+{
+	static HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD coord = { static_cast<short>(x), static_cast<short>(y) };
+	SetConsoleCursorPosition(handle, coord);
+}
+
+void Engine::SetTargetFrameRate(float targetFrameRate)
+{
+	this->targetFrameRate = targetFrameRate;
+	targetOneFrameTime = 1.0f / targetFrameRate;
 }
 
 bool Engine::GetKey(int key)

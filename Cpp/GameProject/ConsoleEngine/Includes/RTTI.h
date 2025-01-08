@@ -1,5 +1,7 @@
 #pragma once
 
+// @refactor: 경고를 일부러 무시
+#pragma warning(disable : 4172)
 #include "Core.h"
 
 // 상속 관계에 있는 클래스 간의

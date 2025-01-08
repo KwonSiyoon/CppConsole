@@ -43,7 +43,7 @@ int main()
 
 	std::cout << "Data : " << list.Find(90)->Data() << "\n";
 	std::cout << "Data : " << list.Find(80)->Data() << "\n";
-	Node<int>* node = new Node<int>();
+	Node<int>* node = list.Find(80);
 	if (list.Find(70, node))
 	{
 		if (node != nullptr)  // 추가적인 nullptr 체크

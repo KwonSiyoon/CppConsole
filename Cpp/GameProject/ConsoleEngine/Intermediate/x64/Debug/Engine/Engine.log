@@ -1,12 +1,16 @@
 ﻿  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Core.h
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\RTTI.h
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Actor\Actor.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Actor\DrawableActor.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Container\List.h
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Engine\Engine.h
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Level\Level.h
+  C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\Math\Vector2.h
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Engine\PreCompiledHeader\PreCompiledHeader.h
-  6개 파일이 복사되었습니다.
+  9개 파일이 복사되었습니다.
+     C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.lib 라이브러리 및 C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.exp 개체를 생성하고 있습니다.
+  Engine.vcxproj -> C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.dll
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.dll
   1개 파일이 복사되었습니다.
   C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.lib
   1개 파일이 복사되었습니다.
-  Engine.vcxproj -> C:\WorkSpace\CppConsole\CppConsole\Cpp\GameProject\ConsoleEngine\Bin\x64\Debug\Engine\Engine.dll

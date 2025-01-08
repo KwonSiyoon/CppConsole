@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Math/Vector2.h"
 
 struct KeyState										// 입력 처리를 위한 구조체.
 {
@@ -20,6 +21,12 @@ public:
 	
 	void LoadLevel(Level* newLevel);				// 레벨 전환 함수.
 
+	// 화면 좌표 관련 함수.
+	void SetCursorPosition(const Vector2& position);
+	void SetCursorPosition(int x, int y);
+
+	void SetTargetFrameRate(float targetFrameRate); // 타겟 프레임 속도 설정 함수.
+
 	bool GetKey(int key);							// 입력 관련 함수.
 	bool GetKeyDown(int key);
 	bool GetKeyUp(int key);
@@ -34,7 +41,9 @@ protected:
 
 	void SavePreviouseKeyStates();					// 이전 프레임의 키 상태를 저장하는 함수.
 
-private:
+protected:
+	float targetFrameRate = 60.0f;					// 타겟 프레임 변수(초당 프레임).
+	float targetOneFrameTime = 0.0f;				// 한 프레임 시간 값(단위 : 초).
 	bool quit;										// 종료할 때 설정할 변수.
 	KeyState keyState[255];							// 키 상태를 저장하는 배열.
 	static Engine* instance;						// 싱글촌 구현을 위한 전역 변수 선언.
