@@ -79,3 +79,18 @@ void Account::Print()
 {
 	std::cout << "°èÁÂ¹øÈ£ : " << id << "  ÀÌ¸§ : " << name << "  ÀÜ¾× : " << balance << "\n";
 }
+
+const int Account::GetID()
+{
+	return id;
+}
+
+const char* Account::GetName()
+{
+	return name;
+}
+
+const int Account::GetBalance()
+{
+	return balance;
+}

@@ -20,6 +20,7 @@ public:
 	void Deposit(int id, int money, ACCOUNT_TYPE type);
 	void Withdraw(int id, int money, ACCOUNT_TYPE type);
 	void Inquire(ACCOUNT_TYPE type);
+	Account** GetAccounts();
 private:
 	class Account* accounts[100]{};
 	class CreditAccount* creditAccounts[100]{};

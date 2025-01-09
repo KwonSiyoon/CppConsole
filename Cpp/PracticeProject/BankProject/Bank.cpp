@@ -147,3 +147,8 @@ void Bank::Inquire(ACCOUNT_TYPE type)
 	}
 	
 }
+
+Account** Bank::GetAccounts()
+{
+	return accounts;
+}

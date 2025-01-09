@@ -37,3 +37,23 @@ void DonationAccount::Print()
 	Account::Print();
 	std::cout << "기부 금액 : " << donation << " 원\n";
 }
+
+const int DonationAccount::GetID()
+{
+	return id;
+}
+
+const char* DonationAccount::GetName()
+{
+	return name;
+}
+
+const int DonationAccount::GetBalance()
+{
+	return balance;
+}
+
+const int DonationAccount::GetDonation()
+{
+	return donation;
+}

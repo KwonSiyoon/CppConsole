@@ -1,6 +1,37 @@
 #include <iostream>
 #include "Bank.h"
 
+const char* ACCOUNT_INFO = "AccountInfo.txt";
+
+void ReadFile()
+{
+	char buffer[1024];
+
+
+
+}
+
+
+void WriteFile(Bank& bank)
+{
+
+	FILE* file = nullptr;
+
+	// 파일 열기.
+	fopen_s(&file, ACCOUNT_INFO, "wt");
+	
+	char data[1024] = {};
+	
+	// 파일 쓰기
+	if (file != nullptr)
+	{
+		// Todo: 파일 쓰기 해야함.
+		/*snprintf(data, 1024, "Type: %d ID: %d name: %s balance: %d \n", bank.GetAccounts()[0].)
+		fputs(data, 1024, "")*/
+	}
+}
+
+
 void Loop()
 {
 	Bank bank;

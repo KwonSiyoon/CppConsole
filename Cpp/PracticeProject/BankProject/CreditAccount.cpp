@@ -38,3 +38,23 @@ void CreditAccount::Print()
 	std::cout << "이자 금액 : " << interest << " 원\n";
 }
 
+const int CreditAccount::GetID()
+{
+	return id;
+}
+
+const char* CreditAccount::GetName()
+{
+	return name;
+}
+
+const int CreditAccount::GetBalance()
+{
+	return balance;
+}
+
+const int CreditAccount::GetInterest()
+{
+	return interest;
+}
+
