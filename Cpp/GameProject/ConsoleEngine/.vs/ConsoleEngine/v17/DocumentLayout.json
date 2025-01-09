@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Level\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Level\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Actor\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Actor\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{91F20160-26EC-41EB-ABDF-5C0D6441CBAF}|Demo\\Demo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Demo\\Actor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{91F20160-26EC-41EB-ABDF-5C0D6441CBAF}|Demo\\Demo.vcxproj|solutionrelative:Demo\\Actor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -19,24 +51,8 @@
       "RelativeMoniker": "D:0:0:{91F20160-26EC-41EB-ABDF-5C0D6441CBAF}|Demo\\Demo.vcxproj|solutionrelative:Demo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Actor\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Level\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Math\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Math\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\PreCompiledHeader\\PreCompiledHeader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,22 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Level\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Actor\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Math\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -86,24 +86,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Demo\\Actor\\Player.cpp",
               "RelativeDocumentMoniker": "Demo\\Actor\\Player.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Demo\\Actor\\Player.cpp",
               "RelativeToolTip": "Demo\\Actor\\Player.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-08T04:39:52.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Demo\\Game\\Game.cpp",
               "RelativeDocumentMoniker": "Demo\\Game\\Game.cpp",
@@ -111,12 +111,11 @@
               "RelativeToolTip": "Demo\\Game\\Game.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-08T03:49:47.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T03:49:47.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Demo\\Main.cpp",
               "RelativeDocumentMoniker": "Demo\\Main.cpp",
@@ -124,12 +123,11 @@
               "RelativeToolTip": "Demo\\Main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-08T03:49:46.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T03:49:46.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "DrawableActor.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\DrawableActor.cpp",
               "RelativeDocumentMoniker": "Engine\\Actor\\DrawableActor.cpp",
@@ -137,8 +135,7 @@
               "RelativeToolTip": "Engine\\Actor\\DrawableActor.cpp",
               "ViewState": "AgIAAAQAAAAAAAAAAAAwwA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-08T01:44:48.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T01:44:48.176Z"
             },
             {
               "$type": "Document",
@@ -150,12 +147,11 @@
               "RelativeToolTip": "Engine\\Actor\\DrawableActor.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-08T01:32:12.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T01:32:12.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Vector2.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Math\\Vector2.cpp",
               "RelativeDocumentMoniker": "Engine\\Math\\Vector2.cpp",
@@ -163,8 +159,7 @@
               "RelativeToolTip": "Engine\\Math\\Vector2.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-08T01:01:18.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T01:01:18.805Z"
             },
             {
               "$type": "Document",
@@ -176,25 +171,24 @@
               "RelativeToolTip": "Engine\\Math\\Vector2.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-08T00:56:42.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T00:56:42.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "List.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Container\\List.h",
               "RelativeDocumentMoniker": "Engine\\Container\\List.h",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Container\\List.h",
               "RelativeToolTip": "Engine\\Container\\List.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAswH4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-08T00:39:53.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "PreCompiledHeader.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\PreCompiledHeader\\PreCompiledHeader.cpp",
               "RelativeDocumentMoniker": "Engine\\PreCompiledHeader\\PreCompiledHeader.cpp",
@@ -202,12 +196,11 @@
               "RelativeToolTip": "Engine\\PreCompiledHeader\\PreCompiledHeader.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-06T07:38:05.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:38:05.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "RTTI.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\RTTI.h",
               "RelativeDocumentMoniker": "Engine\\RTTI.h",
@@ -215,18 +208,17 @@
               "RelativeToolTip": "Engine\\RTTI.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:37:43.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:37:43.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Core.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Core.h",
               "RelativeDocumentMoniker": "Engine\\Core.h",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Core.h",
               "RelativeToolTip": "Engine\\Core.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-06T07:24:49.292Z",
               "EditorCaption": ""
@@ -241,83 +233,82 @@
               "RelativeToolTip": "Engine\\PreCompiledHeader\\PreCompiledHeader.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T06:15:02.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T06:15:02.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Level.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp",
               "RelativeDocumentMoniker": "Engine\\Level\\Level.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp",
               "RelativeToolTip": "Engine\\Level\\Level.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAcwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-03T03:39:19.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "Level.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h",
               "RelativeDocumentMoniker": "Engine\\Level\\Level.h",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h",
               "RelativeToolTip": "Engine\\Level\\Level.h",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAYAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-03T03:39:02.518Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Actor.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.cpp",
               "RelativeDocumentMoniker": "Engine\\Actor\\Actor.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.cpp",
               "RelativeToolTip": "Engine\\Actor\\Actor.cpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-03T03:32:35.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
               "Title": "Actor.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.h",
               "RelativeDocumentMoniker": "Engine\\Actor\\Actor.h",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Actor\\Actor.h",
               "RelativeToolTip": "Engine\\Actor\\Actor.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-03T03:32:27.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Engine.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp",
               "RelativeDocumentMoniker": "Engine\\Engine\\Engine.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp",
               "RelativeToolTip": "Engine\\Engine\\Engine.cpp",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAwwH8AAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAcwH4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-02T07:15:29.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "Engine.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h",
               "RelativeDocumentMoniker": "Engine\\Engine\\Engine.h",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h",
               "RelativeToolTip": "Engine\\Engine\\Engine.h",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAcwEAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-02T07:13:21.39Z",
               "EditorCaption": ""

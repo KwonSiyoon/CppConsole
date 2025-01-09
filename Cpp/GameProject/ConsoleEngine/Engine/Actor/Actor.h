@@ -12,6 +12,10 @@ class ENGINE_API Actor : public RTTI
 	// dynamic_cast 연산자를 활용해야 하는 데 성능을 위해 커스텀 버전 사용.
 	RTTI_DECLARATIONS(Actor, RTTI)
 
+	// Level 클래스를 friend로 선언.
+	// private에 접근이 가능하도록.
+	friend class Level;
+
 public:
 	Actor();
 	virtual ~Actor();
@@ -23,6 +27,10 @@ public:
 	// Getter/Setter.
 	virtual void SetPosition(const Vector2& newPosition);
 	inline Vector2 Position() const;
+
+	bool IsActive() const { return isActive; }
+	inline void SetActive(bool active) { isActive = active; }
+	inline void Destory() { isExpired = true; }
 
 protected:
 	// ID(해시) 또는 이름 값.

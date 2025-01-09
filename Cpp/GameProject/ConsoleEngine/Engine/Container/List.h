@@ -42,6 +42,21 @@ public:
         size++;
     }
 
+    void Erase(int index)
+    {
+        if (index < 0 || index >= size)
+        {
+            __debugbreak();
+        }
+
+        for (int i = index; i < size - 1; ++i)
+        {
+            data[i] = std::move(data[i + 1]);
+        }
+        // 삭제 후 크기 줄이기.
+        --size;
+    }
+
     int Size() const
     {
         return size;

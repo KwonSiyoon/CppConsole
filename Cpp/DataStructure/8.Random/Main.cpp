@@ -21,38 +21,6 @@ int main()
 
 	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
 	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
-	std::cout << "Random Number: " << RandomRange(3,10) << "\n";
 	
 	
 	std::cin.get();

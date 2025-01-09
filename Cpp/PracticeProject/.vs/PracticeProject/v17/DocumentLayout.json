@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "BankProject\\DonationAccount.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\PracticeProject\\BankProject\\DonationAccount.cpp",
               "RelativeToolTip": "BankProject\\DonationAccount.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-02T12:59:47.173Z",
               "EditorCaption": ""
@@ -95,8 +95,7 @@
               "RelativeToolTip": "BankProject\\DonationAccount.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T12:59:15.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T12:59:15.823Z"
             },
             {
               "$type": "Document",
@@ -108,8 +107,7 @@
               "RelativeToolTip": "BankProject\\Account.cpp",
               "ViewState": "AgIAACoAAAAAAAAAAAAQwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T12:57:24.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T12:57:24.406Z"
             },
             {
               "$type": "Document",
@@ -121,8 +119,7 @@
               "RelativeToolTip": "BankProject\\Account.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T12:55:50.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T12:55:50.609Z"
             },
             {
               "$type": "Document",
@@ -158,8 +155,7 @@
               "RelativeToolTip": "BankProject\\Main.cpp",
               "ViewState": "AgIAAFIAAAAAAAAAAAAQwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T12:54:39.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T12:54:39.28Z"
             }
           ]
         }
