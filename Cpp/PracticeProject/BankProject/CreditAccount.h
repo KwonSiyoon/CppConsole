@@ -4,7 +4,7 @@ class CreditAccount : public Account
 {
 public:
 	CreditAccount();
-	CreditAccount(int id, const char* name, int money);
+	CreditAccount(int id, const char* name, int money, int interest = 0);
 	virtual ~CreditAccount() override;
 	virtual void Deposit(int money) override;
 	virtual void Withdraw(int money) override;

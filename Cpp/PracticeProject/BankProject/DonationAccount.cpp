@@ -7,8 +7,8 @@ DonationAccount::DonationAccount()
 {
 }
 
-DonationAccount::DonationAccount(int id, const char* name, int money)
-	: Account(id, name, money), donation(0)
+DonationAccount::DonationAccount(int id, const char* name, int money, int donation = 0)
+	: Account(id, name, money), donation(donation)
 {
 }
 
