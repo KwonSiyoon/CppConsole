@@ -17,7 +17,7 @@ enum class CursorType
 	NormalCursor
 };
 
-
+class Actor;
 class Level;
 class ENGINE_API Engine										// 엔진 클래스.
 {

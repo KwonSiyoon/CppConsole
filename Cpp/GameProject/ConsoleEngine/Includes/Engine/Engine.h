@@ -17,7 +17,7 @@ enum class CursorType
 	NormalCursor
 };
 
-
+class Actor;
 class Level;
 class ENGINE_API Engine										// 엔진 클래스.
 {
@@ -28,6 +28,10 @@ public:
 	void Run();										// 엔진 실행 함수.
 	
 	void LoadLevel(Level* newLevel);				// 레벨 전환 함수.
+	
+	// 액터 추가/삭제 함수.
+	void AddActor(Actor* newActor);
+	void DestroyActor(Actor* targetActor);
 
 	// 화면 좌표 관련 함수.
 	void SetCursorType(CursorType cursorType);
@@ -46,6 +50,8 @@ public:
 protected:
 	void ProcessInput();							// 입력 처리.
 	void Update(float deltaTime);					// Tick();
+
+	void Clear();									// 화면 지우기.
 	void Draw();									// Render();
 
 	void SavePreviouseKeyStates();					// 이전 프레임의 키 상태를 저장하는 함수.
@@ -57,6 +63,6 @@ protected:
 	KeyState keyState[255];							// 키 상태를 저장하는 배열.
 	static Engine* instance;						// 싱글촌 구현을 위한 전역 변수 선언.
 	Level* mainLevel;								// 메인 레벨 변수.
-
+	bool shouldUpdata = true;						// 프레임을 업데이트해야 하는지 여부를 나타내는 변수.
 };
 
