@@ -7,7 +7,7 @@ CreditAccount::CreditAccount()
 {
 }
 
-CreditAccount::CreditAccount(int id, const char* name, int money, int interest = 0)
+CreditAccount::CreditAccount(int id, const char* name, int money, int interest)
 	: Account(id, name, money), interest(interest)
 {
 }

@@ -111,11 +111,11 @@ void Bank::LoadFromFile(const char* filename)
 			if (fgets(buffer, 1024, file) != nullptr)
 			{
 				char namebuffer[256];
-				int type, id, balance;
+				int type, id, balance, other;
 
 				if (sscanf_s(buffer,
 					LOAD_FORMAT,
-					&type, &id, namebuffer, 256, &balance) == 4)
+					&type, &id, namebuffer, 256, &balance, &other) == 5)
 				{
 
 					// 계좌 타입에 따라 적절한 배열에 추가
@@ -132,7 +132,7 @@ void Bank::LoadFromFile(const char* filename)
 					case ACCOUNT_TYPE::CREDIT_ACCOUNT:
 						if (creditAccountsNum < 100)
 						{
-							creditAccounts[creditAccountsNum] = new CreditAccount(id, namebuffer, balance);
+							creditAccounts[creditAccountsNum] = new CreditAccount(id, namebuffer, balance, other);
 							creditAccountsNum++;
 						}
 						break;
@@ -140,7 +140,7 @@ void Bank::LoadFromFile(const char* filename)
 					case ACCOUNT_TYPE::DONATION_ACCOUNT:
 						if (donationAccountsNum < 100)
 						{
-							donationAccounts[donationAccountsNum] = new DonationAccount(id, namebuffer, balance);
+							donationAccounts[donationAccountsNum] = new DonationAccount(id, namebuffer, balance, other);
 							donationAccountsNum++;
 						}
 						break;
