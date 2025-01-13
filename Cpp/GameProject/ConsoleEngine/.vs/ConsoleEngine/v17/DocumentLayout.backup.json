@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Actor\\TestScrollActor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Actor\\TestScrollActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Level\\TextScrollLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Level\\TextScrollLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Actor\\TestScrollActor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Level\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Level\\Level.cpp||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{661BFA1C-E02F-4B1E-A028-7373D8B5D393}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Level\\TextScrollLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -21,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Actor\\TestScrollActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CC2C6C43-305D-456A-B421-A6C6B23240A5}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +54,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Engine.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp",
+              "RelativeDocumentMoniker": "Engine\\Engine\\Engine.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.cpp",
+              "RelativeToolTip": "Engine\\Engine\\Engine.cpp",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAwFYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:06:16.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Level.cpp",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp",
+              "RelativeDocumentMoniker": "Engine\\Level\\Level.cpp",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.cpp",
+              "RelativeToolTip": "Engine\\Level\\Level.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:00:07.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Level.h",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h",
+              "RelativeDocumentMoniker": "Engine\\Level\\Level.h",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Level\\Level.h",
+              "RelativeToolTip": "Engine\\Level\\Level.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T06:59:55.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h",
+              "RelativeDocumentMoniker": "Engine\\Engine\\Engine.h",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\Engine\\Engine\\Engine.h",
+              "RelativeToolTip": "Engine\\Engine\\Engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T06:59:50.418Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -55,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "TextScrollLevel.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Level\\TextScrollLevel.h",
               "RelativeDocumentMoniker": "TextScrollDemo\\Level\\TextScrollLevel.h",
@@ -63,12 +131,11 @@
               "RelativeToolTip": "TextScrollDemo\\Level\\TextScrollLevel.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T07:49:51.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T07:49:51.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
               "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.h",
@@ -76,12 +143,11 @@
               "RelativeToolTip": "TextScrollDemo\\Game\\Game.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T07:48:43.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T07:48:43.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
               "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.cpp",
@@ -89,44 +155,43 @@
               "RelativeToolTip": "TextScrollDemo\\Game\\Game.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T07:48:39.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T07:48:39.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "TestScrollActor.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.cpp",
               "RelativeDocumentMoniker": "TextScrollDemo\\Actor\\TestScrollActor.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.cpp",
               "RelativeToolTip": "TextScrollDemo\\Actor\\TestScrollActor.cpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAACUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-10T07:36:54.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "TestScrollActor.h",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.h",
               "RelativeDocumentMoniker": "TextScrollDemo\\Actor\\TestScrollActor.h",
-              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.h*",
-              "RelativeToolTip": "TextScrollDemo\\Actor\\TestScrollActor.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Actor\\TestScrollActor.h",
+              "RelativeToolTip": "TextScrollDemo\\Actor\\TestScrollActor.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-10T07:34:40.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Main.cpp",
               "RelativeDocumentMoniker": "TextScrollDemo\\Main.cpp",
               "ToolTip": "C:\\WorkSpace\\CppConsole\\CppConsole\\Cpp\\GameProject\\ConsoleEngine\\TextScrollDemo\\Main.cpp",
               "RelativeToolTip": "TextScrollDemo\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-10T07:33:28.337Z",
               "EditorCaption": ""

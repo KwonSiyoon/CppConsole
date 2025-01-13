@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <string>
 #include <vector>
@@ -7,15 +7,15 @@
 class Hashtable
 {
 private:
-	// Alias(º°Äª) ¼±¾ğ.
+	// Alias(ë³„ì¹­) ì„ ì–¸.
 	using Entry = Pair<std::string, std::string>;
 
 public:
-	// ¸í½ÃÀûÀ¸·Î ±âº» »ı¼ºÀÚ ¼±¾ğ.
+	// ëª…ì‹œì ìœ¼ë¡œ ê¸°ë³¸ ìƒì„±ì ì„ ì–¸.
 	Hashtable() = default;
-	// ¸í½ÃÀûÀ¸·Î ±âº» ¼Ò¸êÀÚ ¼±¾ğ.
+	// ëª…ì‹œì ìœ¼ë¡œ ê¸°ë³¸ ì†Œë©¸ì ì„ ì–¸.
 	~Hashtable() = default;
-
+     
 	bool IsEmpty() const;
 	void Add(const std::string& key, const std::string& value);
 	void Delete(const std::string& key);

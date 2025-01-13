@@ -1,4 +1,4 @@
-#include "Hashtable.h"
+ï»¿#include "Hashtable.h"
 #include <iostream>
 
 int GenerateKey(const std::string& keyString)
@@ -11,7 +11,7 @@ int GenerateKey(const std::string& keyString)
 		key = key * 31 + keyString[ix];
 	}
 
-	// ÇØ½Ã °ªÀÌ ³Ê¹« Å©¸é À½¼ö°¡ ¹İÈ¯µÇ´Â °æ¿ì°¡ ÀÖ¾î¼­ ¾ç¼ö·Î ¸¸µë.
+	// í•´ì‹œ ê°’ì´ ë„ˆë¬´ í¬ë©´ ìŒìˆ˜ê°€ ë°˜í™˜ë˜ëŠ” ê²½ìš°ê°€ ìˆì–´ì„œ ì–‘ìˆ˜ë¡œ ë§Œë“¬.
 	//return std::abs(key);
 	return key < 0 ? -key : key;
 }
@@ -38,11 +38,11 @@ void Hashtable::Add(const std::string& key, const std::string& value)
 	{
 		if (position[ix].key == key)
 		{
-			std::cout << "ÀÌ¹Ì µ¿ÀÏÇÑ µ¥ÀÌÅÍ°¡ ÀúÀåµÅ ÀÖ½À´Ï´Ù.\n";
+			std::cout << "ì´ë¯¸ ë™ì¼í•œ ë°ì´í„°ê°€ ì €ì¥ë¼ ìˆìŠµë‹ˆë‹¤.\n";
 			return;
 		}
 	}
-
+    
 	position.push_back(Entry(key, value));
 }
 
@@ -57,13 +57,13 @@ void Hashtable::Delete(const std::string& key)
 		if (position[ix].key == key)
 		{
 			position.erase(position.begin()+ix);
-			std::cout << "Ç×¸ñÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.\n";
+			std::cout << "í•­ëª©ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n";
 
 			return;
 		}
 	}
 
-	std::cout << "»èÁ¦ÇÒ µ¥ÀÌÅÍ¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.\n";
+	std::cout << "ì‚­ì œí•  ë°ì´í„°ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.\n";
 }
 
 bool Hashtable::Find(const std::string& key, Entry& outValue)
@@ -72,7 +72,7 @@ bool Hashtable::Find(const std::string& key, Entry& outValue)
 
 	if (table[bucketIndex].size() == 0)
 	{
-		std::cout << "ÇØ´ç Å°·Î µ¥ÀÌÅÍ¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.\n";
+		std::cout << "í•´ë‹¹ í‚¤ë¡œ ë°ì´í„°ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.\n";
 		outValue = Entry();
 		return false;
 	}
@@ -86,7 +86,7 @@ bool Hashtable::Find(const std::string& key, Entry& outValue)
 		}
 	}
 
-	std::cout << "ÇØ´ç Å°·Î µ¥ÀÌÅÍ¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.\n";
+	std::cout << "í•´ë‹¹ í‚¤ë¡œ ë°ì´í„°ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.\n";
 	outValue = Entry();
 	return false;
 }
@@ -97,7 +97,7 @@ bool Hashtable::Find(const std::string& key, Entry& outValue)
 //
 //	if (table[bucketIndex].size() == 0)
 //	{
-//		std::cout << "ÇØ´ç Å°·Î µ¥ÀÌÅÍ¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.\n";
+//		std::cout << "í•´ë‹¹ í‚¤ë¡œ ë°ì´í„°ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.\n";
 //		return Entry();
 //	}
 //
@@ -109,7 +109,7 @@ bool Hashtable::Find(const std::string& key, Entry& outValue)
 //		}
 //	}
 //
-//	std::cout << "ÇØ´ç Å°·Î µ¥ÀÌÅÍ¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.\n";
+//	std::cout << "í•´ë‹¹ í‚¤ë¡œ ë°ì´í„°ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.\n";
 //	return Entry();
 //}
 
@@ -124,8 +124,8 @@ void Hashtable::Print()
 
 		for (size_t jx = 0; jx < table[ix].size(); ++jx)
 		{
-			std::cout << "Å°: " << table[ix][jx].key
-				<< " °ª: " << table[ix][jx].value << std::endl;
+			std::cout << "í‚¤: " << table[ix][jx].key
+				<< " ê°’: " << table[ix][jx].value << std::endl;
 		}
 	}
 }

@@ -1,9 +1,17 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Actor/Actor.h"
 
 class TextScrollActor : public Actor
 {
+    // ì…ë ¥ ë§í–¥ ì—´ê±°í˜• ì„ ì–¸.
+    enum class Direction
+    {
+        None = -1,
+        Left = 0,
+        Right
+    };
+
 	RTTI_DECLARATIONS(TextScrollActor, Actor)
 public:
 	TextScrollActor(const char* message);
@@ -11,12 +19,15 @@ public:
 	virtual void Update(float deltaTime) override;
 	virtual void Draw() override;
 private:
-	char* string = nullptr;			// È­¸é¿¡ º¸¿©ÁÙ ¹®ÀÚ¿­ °ª.
-	int length = 0;					// ¹®ÀÚ¿­ ±æÀÌ.
-	int index = 0;					// È­¸é¿¡ º¸¿©ÁÙ ¹®ÀÚ¿­ÀÇ ½ÃÀÛ ÀÎµ¦½º.
-	int printWidth = 20;			// È­¸é¿¡ º¸¿©ÁÙ ¹®ÀÚ ±æÀÌ.
+    Direction direction = Direction::None;          // ë°©í–¥ ë³€ìˆ˜.
+    bool shouldUpdate = false;                      // ì—…ë°ì´íŠ¸ ì—¬ë¶€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” í•¨ìˆ˜.
+	char* string = nullptr;			                // í™”ë©´ì— ë³´ì—¬ì¤„ ë¬¸ìì—´ ê°’.
+	int length = 0;					                // ë¬¸ìì—´ ê¸¸ì´.
+	int index = 0;					                // í™”ë©´ì— ë³´ì—¬ì¤„ ë¬¸ìì—´ì˜ ì‹œì‘ ì¸ë±ìŠ¤.
+	int printWidth = 20;			                // í™”ë©´ì— ë³´ì—¬ì¤„ ë¬¸ì ê¸¸ì´.
+    char* temp = nullptr;
 
-	// µô·¹ÀÌ¸¦ À§ÇÑ º¯¼ö.
+	// ë”œë ˆì´ë¥¼ ìœ„í•œ ë³€ìˆ˜.
 	float elapsedTime = 0.0f;
 	float delayTime = 0.08f;
 };

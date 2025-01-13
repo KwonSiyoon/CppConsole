@@ -1,15 +1,15 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Core.h"
 #include "Math/Vector2.h"
 
-struct KeyState										// ÀÔ·Â Ã³¸®¸¦ À§ÇÑ ±¸Á¶Ã¼.
+struct KeyState										    // ì…ë ¥ ì²˜ë¦¬ë¥¼ ìœ„í•œ êµ¬ì¡°ì²´.
 {
-	bool isKeyDown = false;							// ÇöÀç ÇÁ·¹ÀÓ¿¡ Å°°¡ ´­·È´ÂÁö È®ÀÎ.
-	bool wasKeyDown = false;						// ÀÌÀü ÇÁ·¹ÀÓ¿¡ Å°°¡ ´­·È¾ú´ÂÁö È®ÀÎ.
+	bool isKeyDown = false;							    // í˜„ì¬ í”„ë ˆì„ì— í‚¤ê°€ ëˆŒë ¸ëŠ”ì§€ í™•ì¸.
+	bool wasKeyDown = false;						    // ì´ì „ í”„ë ˆì„ì— í‚¤ê°€ ëˆŒë ¸ì—ˆëŠ”ì§€ í™•ì¸.
 };
 
-// Ä¿¼­ÀÇ Á¾·ù¸¦ ¼³Á¤ÇÒ ¶§ »ç¿ëÇÒ ¿­°ÅÇü.
+// ì»¤ì„œì˜ ì¢…ë¥˜ë¥¼ ì„¤ì •í•  ë•Œ ì‚¬ìš©í•  ì—´ê±°í˜•.
 enum class CursorType
 {
 	NoCursor,
@@ -19,50 +19,50 @@ enum class CursorType
 
 class Actor;
 class Level;
-class ENGINE_API Engine										// ¿£Áø Å¬·¡½º.
+class ENGINE_API Engine								    // ì—”ì§„ í´ë˜ìŠ¤.
 {
 public:
 	Engine();
 	virtual ~Engine();
 
-	void Run();										// ¿£Áø ½ÇÇà ÇÔ¼ö.
+	void Run();										    // ì—”ì§„ ì‹¤í–‰ í•¨ìˆ˜.
 	
-	void LoadLevel(Level* newLevel);				// ·¹º§ ÀüÈ¯ ÇÔ¼ö.
+	void LoadLevel(Level* newLevel);				    // ë ˆë²¨ ì „í™˜ í•¨ìˆ˜.
 	
-	// ¾×ÅÍ Ãß°¡/»èÁ¦ ÇÔ¼ö.
+	// ì•¡í„° ì¶”ê°€/ì‚­ì œ í•¨ìˆ˜.
 	void AddActor(Actor* newActor);
 	void DestroyActor(Actor* targetActor);
 
-	// È­¸é ÁÂÇ¥ °ü·Ã ÇÔ¼ö.
+	// í™”ë©´ ì¢Œí‘œ ê´€ë ¨ í•¨ìˆ˜.
 	void SetCursorType(CursorType cursorType);
-	void SetCursorPosition(const Vector2& position);
+	void SetCursorPosition(const Vector2& position);    
 	void SetCursorPosition(int x, int y);
 
-	void SetTargetFrameRate(float targetFrameRate); // Å¸°Ù ÇÁ·¹ÀÓ ¼Óµµ ¼³Á¤ ÇÔ¼ö.
+	void SetTargetFrameRate(float targetFrameRate);     // íƒ€ê²Ÿ í”„ë ˆì„ ì†ë„ ì„¤ì • í•¨ìˆ˜.
 
-	bool GetKey(int key);							// ÀÔ·Â °ü·Ã ÇÔ¼ö.
+	bool GetKey(int key);							    // ì…ë ¥ ê´€ë ¨ í•¨ìˆ˜.
 	bool GetKeyDown(int key);
 	bool GetKeyUp(int key);
 
-	void QuitGame();								// ¿£Áø Á¾·á ÇÔ¼ö.
-	static Engine& Get();							// ½Ì±ÛÅæ °´Ã¼ Á¢±Ù ÇÔ¼ö.
+	void QuitGame();								    // ì—”ì§„ ì¢…ë£Œ í•¨ìˆ˜.
+	static Engine& Get();							    // ì‹±ê¸€í†¤ ê°ì²´ ì ‘ê·¼ í•¨ìˆ˜.
 
 protected:
-	void ProcessInput();							// ÀÔ·Â Ã³¸®.
-	void Update(float deltaTime);					// Tick();
+	void ProcessInput();							    // ì…ë ¥ ì²˜ë¦¬.
+	void Update(float deltaTime);					    // Tick();
 
-	void Clear();									// È­¸é Áö¿ì±â.
-	void Draw();									// Render();
+	void Clear();									    // í™”ë©´ ì§€ìš°ê¸°.
+	void Draw();									    // Render();
 
-	void SavePreviouseKeyStates();					// ÀÌÀü ÇÁ·¹ÀÓÀÇ Å° »óÅÂ¸¦ ÀúÀåÇÏ´Â ÇÔ¼ö.
+	void SavePreviouseKeyStates();					    // ì´ì „ í”„ë ˆì„ì˜ í‚¤ ìƒíƒœë¥¼ ì €ì¥í•˜ëŠ” í•¨ìˆ˜.
 
 protected:
-	float targetFrameRate = 60.0f;					// Å¸°Ù ÇÁ·¹ÀÓ º¯¼ö(ÃÊ´ç ÇÁ·¹ÀÓ).
-	float targetOneFrameTime = 0.0f;				// ÇÑ ÇÁ·¹ÀÓ ½Ã°£ °ª(´ÜÀ§ : ÃÊ).
-	bool quit;										// Á¾·áÇÒ ¶§ ¼³Á¤ÇÒ º¯¼ö.
-	KeyState keyState[255];							// Å° »óÅÂ¸¦ ÀúÀåÇÏ´Â ¹è¿­.
-	static Engine* instance;						// ½Ì±ÛÃÌ ±¸ÇöÀ» À§ÇÑ Àü¿ª º¯¼ö ¼±¾ğ.
-	Level* mainLevel;								// ¸ŞÀÎ ·¹º§ º¯¼ö.
-	bool shouldUpdata = true;						// ÇÁ·¹ÀÓÀ» ¾÷µ¥ÀÌÆ®ÇØ¾ß ÇÏ´ÂÁö ¿©ºÎ¸¦ ³ªÅ¸³»´Â º¯¼ö.
+	float targetFrameRate = 60.0f;					    // íƒ€ê²Ÿ í”„ë ˆì„ ë³€ìˆ˜(ì´ˆë‹¹ í”„ë ˆì„).
+	float targetOneFrameTime = 0.0f;				    // í•œ í”„ë ˆì„ ì‹œê°„ ê°’(ë‹¨ìœ„ : ì´ˆ).
+	bool quit;										    // ì¢…ë£Œí•  ë•Œ ì„¤ì •í•  ë³€ìˆ˜.
+	KeyState keyState[255];							    // í‚¤ ìƒíƒœë¥¼ ì €ì¥í•˜ëŠ” ë°°ì—´.
+	static Engine* instance;						    // ì‹±ê¸€ì´Œ êµ¬í˜„ì„ ìœ„í•œ ì „ì—­ ë³€ìˆ˜ ì„ ì–¸.
+	Level* mainLevel;								    // ë©”ì¸ ë ˆë²¨ ë³€ìˆ˜.
+	bool shouldUpdata = true;						    // í”„ë ˆì„ì„ ì—…ë°ì´íŠ¸í•´ì•¼ í•˜ëŠ”ì§€ ì—¬ë¶€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë³€ìˆ˜.
 };
 

@@ -1,51 +1,85 @@
-#include "TestScrollActor.h"
+ï»¿#include "TestScrollActor.h"
 #include "Engine/Engine.h"
 #include <Windows.h>
 
 TextScrollActor::TextScrollActor(const char* message)
 {
-	// ¹®ÀÚ¿­ ±æÀÌ ±¸ÇÏ±â.
+	// ë¬¸ìì—´ ê¸¸ì´ êµ¬í•˜ê¸°.
 	length = (int)strlen(message);
 
-	// ¹®ÀÚ¿­ º¹»ç.
+	// ë¬¸ìì—´ ë³µì‚¬.
 	string = new char[length + 1];
 	strcpy_s(string, length + 1, message);
+    temp = new char[printWidth + 1];
 
-	// Ä¿¼­ °¨Ãß±â.
+	// ì»¤ì„œ ê°ì¶”ê¸°.
 	Engine::Get().SetCursorType(CursorType::NoCursor);
 }
 
 TextScrollActor::~TextScrollActor()
 {
 	delete[] string;
+    delete[] temp;
 }
 
 void TextScrollActor::Update(float deltaTime)
 {
-	// ESC Á¾·á.
+	// ESC ì¢…ë£Œ.
 	if (Engine::Get().GetKeyDown(VK_ESCAPE))
 	{
 		Engine::Get().QuitGame();
 	}
+    // ì¢Œìš° ë°©í–¥í‚¤ ì…ë ¥ ì²˜ë¦¬.
+    if (Engine::Get().GetKey(VK_LEFT))
+    {
+        // ë°©í–¥ ì„¤ì •.
+        direction = Direction::Left;
+        shouldUpdate = true;
+    }
+    if (Engine::Get().GetKey(VK_RIGHT))
+    {
+        // ë°©í–¥ ì„¤ì •.
+        direction = Direction::Right;
+        shouldUpdate = true;
+    }
+    // ë°©í–¥í‚¤ê°€ ì•ˆëˆŒë ¸ëŠ”ì§€ í™•ì¸.
+    if (!Engine::Get().GetKey(VK_LEFT) && !Engine::Get().GetKey(VK_RIGHT))
+    {
+        shouldUpdate = false;
+    }
 
-	// µô·¹ÀÌ °è»ê.
+	// ë”œë ˆì´ ê³„ì‚°.
 	elapsedTime += deltaTime;
-	// ½Ã°£ÀÌ ¸ğµÎ °æ°úÇß´ÂÁö È®ÀÎ
+	// ì‹œê°„ì´ ëª¨ë‘ ê²½ê³¼í–ˆëŠ”ì§€ í™•ì¸
 	if (elapsedTime < delayTime)
 	{
 		return;
 	}
-	// ½Ã°£ÀÌ °æ°ú ÇßÀ¸¸é ´ÙÀ½ °è»êÀ» À§ÇØ ÃÊ±âÈ­.
+	// ì‹œê°„ì´ ê²½ê³¼ í–ˆìœ¼ë©´ ë‹¤ìŒ ê³„ì‚°ì„ ìœ„í•´ ì´ˆê¸°í™”.
 	elapsedTime = 0.0f;
 
-	// È­¸é¿¡ ±×¸± ¹®ÀÚ¿­ÀÇ ½ÃÀÛ ÀÎµ¦½º ¾÷µ¥ÀÌÆ®.
-	index = (index + 1) % length;
+    if (shouldUpdate)
+    {
+        if (direction == Direction::Right)
+        {
+            // í™”ë©´ì— ê·¸ë¦´ ë¬¸ìì—´ì˜ ì‹œì‘ ì¸ë±ìŠ¤ ì—…ë°ì´íŠ¸.
+            index = (index + 1) % length;
+        }
+        else if (direction == Direction::Left)
+        {
+            // í™”ë©´ì— ê·¸ë¦´ ë¬¸ìì—´ì˜ ì‹œì‘ ì¸ë±ìŠ¤ ì—…ë°ì´íŠ¸.
+            index = (index - 1 + length) % length;
+        }
+    }
+
+	
 }
 
 void TextScrollActor::Draw()
 {
-	// ÀÓ½Ã ¹®ÀÚ¿­ ¹öÆÛ.
-	char* temp = new char[printWidth + 1];		// null ¹®ÀÚ¿­ÀÌ ¿Í¾ßÇÏ±â ¶§¹®¿¡ printWidth+1
+	// ì„ì‹œ ë¬¸ìì—´ ë²„í¼.
+	//char* temp = new char[printWidth + 1];		// null ë¬¸ìì—´ì´ ì™€ì•¼í•˜ê¸° ë•Œë¬¸ì— printWidth+1
+
 	int tempIndex = index;
 
 	for (int i = 0; i < printWidth; ++i)
@@ -53,9 +87,9 @@ void TextScrollActor::Draw()
 		temp[i] = string[tempIndex];
 		tempIndex = (tempIndex + 1) % length;
 	}
-	temp[printWidth] = '\0';					// null¹®ÀÚ
+	temp[printWidth] = '\0';					// nullë¬¸ì
 	Log(temp);
-	delete[] temp;
+	//delete[] temp;
 	Engine::Get().SetCursorPosition(0, 0);
 	//Sleep(50);
 }
