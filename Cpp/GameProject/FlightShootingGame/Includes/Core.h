@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <iostream>
 
@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <crtdbg.h>
 
-// �޸� ���� �Լ�.
+// 메모리 삭제 함수.
 template<typename T>
 void SafeDelete(T* pointer)
 {
@@ -17,7 +17,7 @@ void SafeDelete(T* pointer)
 	}
 }
 
-// �α� �Լ�.
+// 로그 함수.
 template<typename... T>
 void Log(const char* format, T&&... args)
 {
@@ -26,7 +26,22 @@ void Log(const char* format, T&&... args)
 	std::cout << buffer;
 }
 
-// ����� �뵵
+// 랜덤 함수.
+inline int Random(int min, int max)
+{
+    // 차이 구하기.
+    int diff = (max - min) + 1;
+    return ((diff * rand()) / (RAND_MAX + 1)) + min;
+
+}
+// 0~1 사이의 랜덤 값을 반환해주는 함수. -> min~max 사이 랜덤값 반환.
+inline float RandomPercent(float min, float max)
+{
+    float random = (float)(rand() / (float)RAND_MAX);
+    return random * (max - min) + min;
+}
+
+// 디버깅 용도
 #ifdef _DEBUG
 #define new new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
 // Replace _NORMAL_BLOCK with _CLIENT_BLOCK if you want the

@@ -26,7 +26,6 @@ public:
 	virtual ~Engine();
 
 	void Run();										    // 엔진 실행 함수.
-	
 	void LoadLevel(Level* newLevel);				    // 레벨 전환 함수.
 	
 	// 액터 추가/삭제 함수.

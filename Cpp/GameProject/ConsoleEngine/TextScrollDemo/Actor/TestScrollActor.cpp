@@ -1,6 +1,7 @@
 ﻿#include "TestScrollActor.h"
 #include "Engine/Engine.h"
 #include <Windows.h>
+#include "Game/Game.h"
 
 TextScrollActor::TextScrollActor(const char* message)
 {
@@ -27,7 +28,8 @@ void TextScrollActor::Update(float deltaTime)
 	// ESC 종료.
 	if (Engine::Get().GetKeyDown(VK_ESCAPE))
 	{
-		Engine::Get().QuitGame();
+		//Engine::Get().QuitGame();
+        Game::Get().ToggleMenu();
 	}
     // 좌우 방향키 입력 처리.
     if (Engine::Get().GetKey(VK_LEFT))
@@ -79,7 +81,6 @@ void TextScrollActor::Draw()
 {
 	// 임시 문자열 버퍼.
 	//char* temp = new char[printWidth + 1];		// null 문자열이 와야하기 때문에 printWidth+1
-
 	int tempIndex = index;
 
 	for (int i = 0; i < printWidth; ++i)
@@ -87,9 +88,10 @@ void TextScrollActor::Draw()
 		temp[i] = string[tempIndex];
 		tempIndex = (tempIndex + 1) % length;
 	}
-	temp[printWidth] = '\0';					// null문자
+	temp[printWidth] = '\0';					    // null문자
 	Log(temp);
-	//delete[] temp;
 	Engine::Get().SetCursorPosition(0, 0);
+	
+    //delete[] temp;
 	//Sleep(50);
 }

@@ -37,6 +37,8 @@ public:
 	void SetCursorType(CursorType cursorType);
 	void SetCursorPosition(const Vector2& position);    
 	void SetCursorPosition(int x, int y);
+    
+    inline Vector2 ScreenSize() const { return screenSize; }    // 화면 크기 반환 함수.
 
 	void SetTargetFrameRate(float targetFrameRate);     // 타겟 프레임 속도 설정 함수.
 
@@ -64,5 +66,7 @@ protected:
 	static Engine* instance;						    // 싱글촌 구현을 위한 전역 변수 선언.
 	Level* mainLevel;								    // 메인 레벨 변수.
 	bool shouldUpdata = true;						    // 프레임을 업데이트해야 하는지 여부를 나타내는 변수.
+    Vector2 screenSize;                                 // 화면 크기.
+    char* emptyStringBuffer = nullptr;                  // 화면 지울 떄 사용할 버퍼(Buffer/Blob).
 };
 

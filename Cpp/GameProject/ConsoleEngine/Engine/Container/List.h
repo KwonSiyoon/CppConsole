@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #pragma warning (disable : 4251)
 
 #include <iostream>
@@ -36,7 +36,7 @@ public:
 
     void PushBack(T&& value)
     {
-        if (size <= capacity)
+        if (size == capacity)
         {
             ReAllocate(capacity * 2);
         }
@@ -56,7 +56,7 @@ public:
         {
             data[i] = std::move(data[i + 1]);
         }
-        // »èÁ¦ ÈÄ Å©±â ÁÙÀÌ±â.
+        // ì‚­ì œ í›„ í¬ê¸° ì¤„ì´ê¸°.
         --size;
     }
 

@@ -9,6 +9,9 @@ DrawableActor::DrawableActor(const char* image)
     auto length = strlen(image) + 1;
     this->image = new char[length];
     strcpy_s(this->image, length, image);
+
+    width = (int)strlen(image);         // 너비 설정.
+    
 }
 DrawableActor::~DrawableActor()
 {
@@ -23,14 +26,14 @@ void DrawableActor::Draw()
 	// 1단계: 콘솔 좌표 옮기기.
 	Engine::Get().SetCursorPosition(position);
 	// 2단계: 그리기(콘솔 출력).
-	Log("%s", image);
+	Log(image);
 }
 
 void DrawableActor::SetPosition(const Vector2& newPosition)
 {
 	// 이전의 위치를 먼저 지우기.
-	Engine::Get().SetCursorPosition(position);
-	Log(" ");
+	/*Engine::Get().SetCursorPosition(position);
+	Log(" ");*/
 
 	// 위치를 새로 옮기기.
 	Super::SetPosition(newPosition);
