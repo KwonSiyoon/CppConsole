@@ -7,6 +7,7 @@ class PlayerBullet : public DrawableActor
 
 public:
     PlayerBullet(const Vector2& position);          // 탄약은 생성할 때 위치를 전달 받아야 함.
+    ~PlayerBullet();
     virtual void Update(float deltaTime) override;
 
 private:

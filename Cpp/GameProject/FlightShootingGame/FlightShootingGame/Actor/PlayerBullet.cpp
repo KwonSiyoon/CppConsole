@@ -8,6 +8,10 @@ PlayerBullet::PlayerBullet(const Vector2& position)
     yPosition = (float)position.y;
 }
 
+PlayerBullet::~PlayerBullet()
+{
+}
+
 void PlayerBullet::Update(float deltaTime)
 {
     Super::Update(deltaTime);
@@ -21,7 +25,7 @@ void PlayerBullet::Update(float deltaTime)
     //if (position.y < 0)
     if (yPosition < 0.0f)
     {
-        Destory();
+        Destroy();
         return;
     }
 }

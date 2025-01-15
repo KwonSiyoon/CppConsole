@@ -1,10 +1,34 @@
 ﻿#pragma once
 
 #include <iostream>
+#include <Windows.h>
 
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <crtdbg.h>
+
+// 색상 열거형.
+enum class Color
+{
+    Red = FOREGROUND_RED,           // 4, 0x0004
+    Green = FOREGROUND_GREEN,       // 2, 0x0002
+    Blue = FOREGROUND_BLUE,         // 1, 0x0001
+    White = Red+Green+Blue,         // 7, 0x0007
+    Purple = 5
+};
+
+// 콘솔 색상 설정 함수.
+inline void SetColor(Color color)
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (int)color);
+}
+
+// 메모리 누수 확인할 때 사용하는 함수.
+inline void CheckMemoryLeak()
+{
+    // https://learn.microsoft.com/ko-kr/cpp/c-runtime-library/find-memory-leaks-using-the-crt-library?view=msvc-170
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+}
 
 // 메모리 삭제 함수.
 template<typename T>

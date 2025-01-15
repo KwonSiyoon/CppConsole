@@ -1,26 +1,26 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Core.h"
 #include "RTTI.h"
 #include "Math/Vector2.h"
 
-// ·¹º§ÀÇ ±âº» ¹°Ã¼.
+// ë ˆë²¨ì˜ ê¸°ë³¸ ë¬¼ì²´.
 class ENGINE_API Actor : public RTTI
 {
-	// RTTI ¼±¾ğ.
-	// ·±Å¸ÀÓ¿¡ ºü¸£°Ô Å¸ÀÔÀ» È®ÀÎÇÏ±â À§ÇÑ ÀÛ¾÷.
-	// dynamic_cast ¿¬»êÀÚ¸¦ È°¿ëÇØ¾ß ÇÏ´Â µ¥ ¼º´ÉÀ» À§ÇØ Ä¿½ºÅÒ ¹öÀü »ç¿ë.
+	// RTTI ì„ ì–¸.
+	// ëŸ°íƒ€ì„ì— ë¹ ë¥´ê²Œ íƒ€ì…ì„ í™•ì¸í•˜ê¸° ìœ„í•œ ì‘ì—….
+	// dynamic_cast ì—°ì‚°ìë¥¼ í™œìš©í•´ì•¼ í•˜ëŠ” ë° ì„±ëŠ¥ì„ ìœ„í•´ ì»¤ìŠ¤í…€ ë²„ì „ ì‚¬ìš©.
 	RTTI_DECLARATIONS(Actor, RTTI)
 
-	// Level Å¬·¡½º¸¦ friend·Î ¼±¾ğ.
-	// private¿¡ Á¢±ÙÀÌ °¡´ÉÇÏµµ·Ï.
+	// Level í´ë˜ìŠ¤ë¥¼ friendë¡œ ì„ ì–¸.
+	// privateì— ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë„ë¡.
 	friend class Level;
 
 public:
 	Actor();
 	virtual ~Actor();
 
-	// ·çÇÁ Ã³¸® ÇÔ¼ö.
+	// ë£¨í”„ ì²˜ë¦¬ í•¨ìˆ˜.
 	virtual void Update(float deltaTime);
 	virtual void Draw();
 
@@ -28,15 +28,15 @@ public:
 	virtual void SetPosition(const Vector2& newPosition);
 	inline Vector2 Position() const;
 
-	bool IsActive() const { return isActive; }
+	bool IsActive() const { return isActive && !isExpired; }
 	inline void SetActive(bool active) { isActive = active; }
-	inline void Destory() { isExpired = true; }
+	inline void Destroy() { isExpired = true; }
 
 protected:
-	// ID(ÇØ½Ã) ¶Ç´Â ÀÌ¸§ °ª.
+	// ID(í•´ì‹œ) ë˜ëŠ” ì´ë¦„ ê°’.
 
-	Vector2 position;					// ¾×ÅÍÀÇ À§Ä¡.
-	bool isActive;						// È°¼ºÈ­ »óÅÂÀÎÁö¸¦ ³ªÅ¸³»´Â º¯¼ö
-	bool isExpired;						// ¾×ÅÍÀÇ Á¦°Å ¿äÃ»ÀÌ µÆ´ÂÁö ¿©ºÎ¸¦ ³ªÅ¸³»´Â º¯¼ö
+	Vector2 position;					// ì•¡í„°ì˜ ìœ„ì¹˜.
+	bool isActive;						// í™œì„±í™” ìƒíƒœì¸ì§€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë³€ìˆ˜
+	bool isExpired;						// ì•¡í„°ì˜ ì œê±° ìš”ì²­ì´ ëëŠ”ì§€ ì—¬ë¶€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë³€ìˆ˜
 };
 

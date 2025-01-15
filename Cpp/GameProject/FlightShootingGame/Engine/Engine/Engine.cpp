@@ -156,7 +156,7 @@ void Engine::DestroyActor(Actor* targetActor)
 		return;
 	}
 	shouldUpdata = false;
-	targetActor->Destory();
+	targetActor->Destroy();
 }
 
 void Engine::SetCursorType(CursorType cursorType)
