@@ -18,57 +18,54 @@
     <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Engine.cpp">
+    <ClCompile Include="Game\Game.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Actor.cpp">
+    <ClCompile Include="Level\MenuLevel.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Level\Level.cpp">
+    <ClCompile Include="Level\MinesweeperLevel.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="PreCompiledHeader\PreCompiledHeader.cpp">
+    <ClCompile Include="Actor\UnopenedCell.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Math\Vector2.cpp">
+    <ClCompile Include="Actor\Empty.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\DrawableActor.cpp">
+    <ClCompile Include="Actor\Wall.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Timer.cpp">
+    <ClCompile Include="Actor\MineIndicator.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Mine.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Engine.h">
+    <ClInclude Include="Level\MinesweeperLevel.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Actor\Actor.h">
+    <ClInclude Include="Actor\Mine.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Level\Level.h">
+    <ClInclude Include="Actor\MineIndicator.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="PreCompiledHeader\PreCompiledHeader.h">
+    <ClInclude Include="Actor\Empty.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Core.h">
+    <ClInclude Include="Actor\Wall.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="RTTI.h">
+    <ClInclude Include="Game\Game.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Container\List.h">
+    <ClInclude Include="Level\MenuLevel.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Math\Vector2.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor\DrawableActor.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Timer.h">
+    <ClInclude Include="Actor\UnopenedCell.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

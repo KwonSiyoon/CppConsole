@@ -1,5 +1,6 @@
 ﻿#include "GameLevel.h"
 #include "Engine/Engine.h"
+#include "Engine/Timer.h"
 #include "Actor/Wall.h"
 #include "Actor/Ground.h"
 #include "Actor/Box.h"
@@ -130,6 +131,9 @@ GameLevel::GameLevel()
     fclose(file);
 }
 
+
+
+
 void GameLevel::Draw()
 {
     // 맵 그리기.
@@ -188,10 +192,99 @@ void GameLevel::Draw()
 void GameLevel::Update(float deltaTime)
 {
     Super::Update(deltaTime);
+    
+    // 게임이 클리어됐으면, 게임 종료 처리.
+    if (isGameClear)
+    {
+        static Timer timer(0.1f);
+        timer.Update(deltaTime);
+        if (!timer.IsTimeOut())
+        {
+            return;
+        }
+        // 커서 이동.
+        Engine::Get().SetCursorPosition(0, Engine::Get().ScreenSize().y);
+
+        // 메시지 출력.
+        Log("Game Clear!");
+
+        Engine::Get().QuitGame();
+    }
 }
 
 bool GameLevel::CanPlayerMove(const Vector2& position)
 {
+    // 게임이 클리어된 경우 바로 종료.
+    if (isGameClear)
+    {
+        return false;
+    }
+
+    // 박스 검색.
+    Box* searchedBox = nullptr;
+    for (auto* box : boxes)
+    {
+        if (box->Position() == position)
+        {
+            searchedBox = box;
+            break;
+        }
+    }
+
+    // 박스가 있을 때 처리.
+    if (searchedBox)
+    {
+        // 이동 방향.
+        int directionX = position.x - player->Position().x;
+        int directionY = position.y - player->Position().y;
+
+        // 박스가 이동할 새 위치.
+        Vector2 newPosition = searchedBox->Position() + Vector2(directionX, directionY);
+
+        // 추가 검색(박스).
+        for (auto* box : boxes)
+        {
+            // 예외 처리.
+            if (box == searchedBox)
+            {
+                continue;
+            }
+            // 이동할 위치에 다른 박스가 있다면 이동 불가.
+            if (box->Position() == newPosition)
+            {
+                return false;
+            }
+        }
+        
+        // 추가 검색(맵).
+        for (auto* actor : map)
+        {
+            // 이동하려는 위치에 있는 액터 검색.
+            if (actor->Position() == newPosition)
+            {
+                // 형변환을 통해 물체의 타입 확인.
+                // 이동하려는 위치에 벽이 있으면 이동 불가.
+                if (actor->As<Wall>())
+                {
+                    return false;
+                }
+                // 땅이나 타겟이면 이동 가능.
+                if (actor->As<Ground>() || actor->As<Target>())
+                {
+                    // 박스 이동 처리.
+                    searchedBox->SetPosition(newPosition);
+                    // 게임 클리어 여부 확인.
+                    isGameClear = CheckIsGameClear();
+
+                    return true;
+                }
+            }
+        }
+
+
+    }
+
+
     // 이동하려는 위치에 벽이 있는지 확인.
     DrawableActor* searchedActor = nullptr;
     // 먼저 이동하려는 위치의 액터 찾기.
@@ -224,4 +317,27 @@ bool GameLevel::CanPlayerMove(const Vector2& position)
     //}
 
     return false;
+}
+
+bool GameLevel::CheckIsGameClear()
+{
+    // 점수 확인을 위한 변수.
+    int currentScore = 0;
+    int targetScore = targets.Size();
+
+    // 타겟 위치에 배치된 박스 개수 세기.
+    for (auto* box : boxes)
+    {
+        for (auto* target : targets)
+        {
+            // 점수 확인.
+            if (box->Position() == target->Position())
+            {
+                ++currentScore;
+                continue;
+            }
+        }
+    }
+    // 획득한 점수가 목표 점수와 같은지 비교.
+    return currentScore == targetScore;
 }

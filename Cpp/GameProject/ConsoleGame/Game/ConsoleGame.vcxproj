@@ -21,32 +21,32 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{661bfa1c-e02f-4b1e-a028-7373d8b5d393}</ProjectGuid>
-    <RootNamespace>Engine</RootNamespace>
+    <ProjectGuid>{91f20160-26ec-41eb-abdf-5c0d6441cbaf}</ProjectGuid>
+    <RootNamespace>Demo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -90,30 +90,22 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ENGINE_BUILD_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\PreCompiledHeader\;</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Includes\;$(ProjectDir)\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>xcopy $(ProjectDir)\*.h $(SolutionDir)\Includes\ /e /y</Command>
-    </PreBuildEvent>
-    <PreLinkEvent>
-      <Command>
-      </Command>
-    </PreLinkEvent>
     <PostBuildEvent>
-      <Command>xcopy $(OutDir)\Engine.dll $(SolutionDir)\Lib\ /y
-xcopy $(OutDir)\Engine.lib $(SolutionDir)\Lib\ /y</Command>
+      <Command>xcopy $(SolutionDir)\Lib\Engine.dll $(OutDir)\ /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy ..\Assets $(OutDir)..\Assets\ /e /y</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -121,61 +113,45 @@ xcopy $(OutDir)\Engine.lib $(SolutionDir)\Lib\ /y</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ENGINE_BUILD_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\PreCompiledHeader\;</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Includes\;$(ProjectDir)\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>xcopy $(ProjectDir)\*.h $(SolutionDir)\Includes\ /e /y</Command>
-    </PreBuildEvent>
-    <PreLinkEvent>
-      <Command>
-      </Command>
-    </PreLinkEvent>
     <PostBuildEvent>
-      <Command>xcopy $(OutDir)\Engine.dll $(SolutionDir)\Lib\ /y
-xcopy $(OutDir)\Engine.lib $(SolutionDir)\Lib\ /y</Command>
+      <Command>xcopy $(SolutionDir)\Lib\Engine.dll $(OutDir)\ /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy ..\Assets $(OutDir)..\Assets\ /e /y</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ENGINE_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\PreCompiledHeader\;</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Includes\;$(ProjectDir)\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>xcopy $(ProjectDir)\*.h $(SolutionDir)\Includes\ /e /y</Command>
-    </PreBuildEvent>
-    <PreLinkEvent>
-      <Command>
-      </Command>
-    </PreLinkEvent>
     <PostBuildEvent>
-      <Command>xcopy $(OutDir)\Engine.dll $(SolutionDir)\Lib\ /y
-xcopy $(OutDir)\Engine.lib $(SolutionDir)\Lib\ /y</Command>
+      <Command>xcopy $(SolutionDir)\Lib\Engine.dll $(OutDir)\ /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy ..\Assets $(OutDir)..\Assets\ /e /y</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -183,59 +159,33 @@ xcopy $(OutDir)\Engine.lib $(SolutionDir)\Lib\ /y</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ENGINE_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\PreCompiledHeader\;</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Includes\;$(ProjectDir)\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>xcopy $(ProjectDir)\*.h $(SolutionDir)\Includes\ /e /y</Command>
-    </PreBuildEvent>
-    <PreLinkEvent>
-      <Command>
-      </Command>
-    </PreLinkEvent>
     <PostBuildEvent>
-      <Command>xcopy $(OutDir)\Engine.dll $(SolutionDir)\Lib\ /y
-xcopy $(OutDir)\Engine.lib $(SolutionDir)\Lib\ /y</Command>
+      <Command>xcopy $(SolutionDir)\Lib\Engine.dll $(OutDir)\ /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy ..\Assets $(OutDir)..\Assets\ /e /y</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Actor\Actor.cpp" />
-    <ClCompile Include="Actor\DrawableActor.cpp" />
-    <ClCompile Include="Math\Vector2.cpp" />
-    <ClCompile Include="PreCompiledHeader\PreCompiledHeader.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Engine\Engine.cpp" />
-    <ClCompile Include="Level\Level.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Level\MenuLevel.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Engine\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Actor\Actor.h" />
-    <ClInclude Include="Actor\DrawableActor.h" />
-    <ClInclude Include="Container\List.h" />
-    <ClInclude Include="Core.h" />
-    <ClInclude Include="Math\Vector2.h" />
-    <ClInclude Include="PreCompiledHeader\PreCompiledHeader.h" />
-    <ClInclude Include="Engine\Engine.h" />
-    <ClInclude Include="Level\Level.h" />
-    <ClInclude Include="RTTI.h" />
-    <ClInclude Include="Engine\Timer.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Level\MenuLevel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
