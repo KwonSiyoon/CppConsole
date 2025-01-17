@@ -183,10 +183,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Actor\Empty.cpp" />
-    <ClCompile Include="Actor\Mine.cpp" />
     <ClCompile Include="Actor\MineIndicator.cpp" />
-    <ClCompile Include="Actor\UnopenedCell.cpp" />
+    <ClCompile Include="Actor\Mine.cpp" />
     <ClCompile Include="Actor\Wall.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Level\MenuLevel.cpp" />
@@ -194,10 +192,8 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Actor\Empty.h" />
-    <ClInclude Include="Actor\Mine.h" />
     <ClInclude Include="Actor\MineIndicator.h" />
-    <ClInclude Include="Actor\UnopenedCell.h" />
+    <ClInclude Include="Actor\Mine.h" />
     <ClInclude Include="Actor\Wall.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Level\MenuLevel.h" />

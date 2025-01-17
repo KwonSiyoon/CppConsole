@@ -28,7 +28,7 @@ void DrawableActor::Draw()
 	// 1단계: 콘솔 좌표 옮기기.
 	Engine::Get().SetCursorPosition(position);
 	// 2단계: 그리기(콘솔 출력).
-	Log(image);
+	Log("%s",image);
 
     // 색상 복구.
     SetColor(Color::White);
