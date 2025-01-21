@@ -1,7 +1,7 @@
 ﻿#include "MineIndicator.h"
 #include "Game/Game.h"
 
-MineIndicator::MineIndicator(const Vector2& position, int mineCount) /*"·"*/
+MineIndicator::MineIndicator(const Vector2& position, int mineCount, std::function<void()> decreaseCount) /*"·"*/
 {
     delete[] image;
     this->position = position;
@@ -13,9 +13,15 @@ MineIndicator::MineIndicator(const Vector2& position, int mineCount) /*"·"*/
     {
         viewImage = new char[2] {(char)(mineCount + '0'),'\0'};
     }
-    coveredImage = new char[2] {'#', '\0'};
+    
+    const char* cover = "○";
+    auto length = strlen(cover) + 1;
+    coveredImage = new char[length];
+    strcpy_s(coveredImage, length, cover);
+
     flagImage = new char[2] {'F', '\0'};
     image = coveredImage;
+    this->decreaseCount = decreaseCount;
 }
 
 MineIndicator::~MineIndicator()
@@ -48,7 +54,8 @@ void MineIndicator::Open()
     isFlaged = false;
     isOpened = true;
     image = viewImage;
-    color = Color::Green;
+    color = Color::Ten; // 밝은 초록.
+    if(decreaseCount) decreaseCount();
 }
 
 void MineIndicator::OnFlag()
@@ -58,13 +65,18 @@ void MineIndicator::OnFlag()
     if (isFlaged)
     {
         image = flagImage;
-        color = Color::Blue;
+        color = Color::Three; // 옅은 파랑.
     }
     else
     {
         image = coveredImage;
         color = Color::White;
     }
+}
+
+bool MineIndicator::GetFlag()
+{
+    return isFlaged;
 }
 
 bool MineIndicator::GetOpened()

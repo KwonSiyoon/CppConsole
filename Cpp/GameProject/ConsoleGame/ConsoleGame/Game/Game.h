@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <Engine/Engine.h>
 
@@ -9,6 +9,8 @@ public:
 	~Game();
 
 	void ToggleMenu();
+    void ClearAndLoadLevel(Level* level);
+    void GoToMain();
 
 	static Game& Get() { return *instance; }
 

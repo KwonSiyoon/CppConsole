@@ -1,9 +1,10 @@
-#include "MenuLevel.h"
+﻿#include "MenuLevel.h"
 #include "Game/Game.h"
 
 MenuLevel::MenuLevel()
 {
 	menuItems.PushBack(new MenuItem("Resume Game", []() { Game::Get().ToggleMenu(); }));
+	menuItems.PushBack(new MenuItem("Go To Main", []() { Game::Get().GoToMain(); }));
 	menuItems.PushBack(new MenuItem("Quit Game", []() { Game::Get().QuitGame(); }));
 	length = menuItems.Size();
 }

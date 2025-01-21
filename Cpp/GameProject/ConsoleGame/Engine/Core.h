@@ -11,10 +11,20 @@
 enum class Color
 {
     Red = FOREGROUND_RED,           // 4, 0x0004
+    Three = 3,
     Green = FOREGROUND_GREEN,       // 2, 0x0002
     Blue = FOREGROUND_BLUE,         // 1, 0x0001
     White = Red+Green+Blue,         // 7, 0x0007
-    Purple = 5
+    Purple = 5,
+    Six = 6,
+    Eight = 8,
+    Nine,
+    Ten,
+    Eleven,
+    Twelve,
+    Thirteen,
+    Fourteen,
+    Fifteen
 };
 
 // 콘솔 색상 설정 함수.

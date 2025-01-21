@@ -1,6 +1,7 @@
-#include "Game.h"
+﻿#include "Game.h"
 
 #include "Level/MenuLevel.h"
+#include "Level/MainLevel.h"
 
 Game* Game::instance = nullptr;
 
@@ -44,4 +45,21 @@ void Game::ToggleMenu()
 	{
 		mainLevel = backLevel;
 	}
+}
+
+void Game::ClearAndLoadLevel(Level* level)
+{
+    if (mainLevel)
+    {
+        delete mainLevel;
+        mainLevel = nullptr;
+    }
+    LoadLevel(level);
+}
+
+void Game::GoToMain()
+{
+    ToggleMenu();
+    system("cls");
+    ClearAndLoadLevel(new MainLevel());
 }
