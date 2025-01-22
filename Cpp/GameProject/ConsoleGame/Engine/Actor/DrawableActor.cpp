@@ -15,7 +15,10 @@ DrawableActor::DrawableActor(const char* image)
 }
 DrawableActor::~DrawableActor()
 {
-    delete[] image;
+    if (image)
+    {
+        delete[] image;
+    }
 }
 
 void DrawableActor::Draw()

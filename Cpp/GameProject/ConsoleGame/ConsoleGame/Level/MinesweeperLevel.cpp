@@ -144,6 +144,7 @@ void MinesweeperLevel::Initialize(const Vector2& gameSize, const Vector2& startP
     mineCounts = (int)mines.size();
 }
 
+// 발표. 마우스 이벤트 처리.
 void MinesweeperLevel::MouseEvent()
 {
     static INPUT_RECORD rec;
@@ -455,7 +456,6 @@ void MinesweeperLevel::GameClear()
 
 void MinesweeperLevel::Retry()
 {
-    
     Engine::Get().SetCursorPosition(Vector2(startPos.x+1, startPos.y+gameSize.y+2));
     SetColor(Color::Red);
     std::cout << "게임 오버!! Space Bar 를 눌러 재시작.";

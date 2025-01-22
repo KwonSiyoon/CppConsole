@@ -26,7 +26,11 @@ MineIndicator::MineIndicator(const Vector2& position, int mineCount, std::functi
 
 MineIndicator::~MineIndicator()
 {
-    if (isFlaged)
+    image = nullptr;
+    delete[] coveredImage;
+    delete[] viewImage;
+    delete[] flagImage;
+    /*if (isFlaged)
     {
         delete[] coveredImage;
         delete[] viewImage;
@@ -41,7 +45,7 @@ MineIndicator::~MineIndicator()
     {
         delete[] flagImage;
         delete[] viewImage;
-    }
+    }*/
 }
 
 void MineIndicator::Update(float deltaTime)

@@ -19,7 +19,11 @@ Mine::Mine(const Vector2& position, std::function<void()> callback)
 
 Mine::~Mine()
 {
-    if (isFlaged)
+    image = nullptr;
+    delete[] coveredImage;
+    delete[] viewImage;
+    delete[] flagImage;
+    /*if (isFlaged)
     {
         delete[] coveredImage;
         delete[] viewImage;
@@ -34,7 +38,7 @@ Mine::~Mine()
     {
         delete[] flagImage;
         delete[] viewImage;
-    }
+    }*/
 }
 
 void Mine::Update(float deltaTime)
