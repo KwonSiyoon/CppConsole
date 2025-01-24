@@ -158,10 +158,10 @@ void MinesweeperLevel::MouseEvent()
     SetConsoleMode(hCin, ENABLE_EXTENDED_FLAGS | ENABLE_MOUSE_INPUT);
 
     //ReadConsoleInput(
-    //    HANDLE hConsoleInput,           // 콘솔 입력 핸들
-    //    PINPUT_RECORD lpBuffer,         // 입력 이벤트를 저장할 버퍼
-    //    DWORD nLength,                  // 읽을 이벤트의 수
-    //    LPDWORD lpNumberOfEventsRead    // 실제로 읽은 이벤트의 수를 저장할 포인터
+    //    [in] HANDLE hConsoleInput,            // 콘솔 입력 핸들
+    //    [out] INPUT_RECORD lpBuffer,          // 입력 이벤트를 저장할 버퍼
+    //    [in]  DWORD nLength,                  // 읽을 이벤트의 수
+    //    [out] LPDWORD lpNumberOfEventsRead    // 실제로 읽은 이벤트의 수를 저장할 포인터
     //);
     if (ReadConsoleInput(hCin, &rec, 1, &dwRead))
     {
@@ -427,12 +427,12 @@ void MinesweeperLevel::Draw()
     {
         Engine::Get().SetCursorPosition(Vector2(startPos.x-1 + gameSize.x - 32, startPos.y-1));
     }
-    std::cout << "남은 지뢰: " << mineCounts << " | 남은 숫자칸: " << indicatorCounts;
+    std::cout << "남은 지뢰: " << mineCounts << " | 남은 숫자칸: " << indicatorCounts << "     ";
 }
 
 void MinesweeperLevel::DecreaseMineCount()
 {
-    if (isGameOver) return;
+    if (isGameOver || isGameClear) return;
     --mineCounts;
 }
 

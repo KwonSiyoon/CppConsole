@@ -55,6 +55,7 @@ void MineIndicator::Update(float deltaTime)
 
 void MineIndicator::Open()
 {
+    if (isOpened) return;
     isFlaged = false;
     isOpened = true;
     image = viewImage;
