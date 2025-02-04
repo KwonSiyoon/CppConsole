@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <list>
+#include <stack>
 
 struct Vector2
 {
