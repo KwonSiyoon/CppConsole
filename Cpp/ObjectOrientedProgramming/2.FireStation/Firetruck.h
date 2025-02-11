@@ -4,6 +4,10 @@
 #include "Point.h"
 #include "Ladder.h"
 
+// 전방선언(Forward Declaration).
+// 헤더 순환 참조를 방지하기 위함. 쌍방 헤더 인클루드를 방지.
+// 컴파일 속도 개선을 위함.
+class FirefighterBase;
 class Firetruck
 {
 public:
@@ -29,11 +33,11 @@ public:
     const Hose* GetHose() const { return hose; }
     void SetHose(Hose* hose) { this->hose = hose; }
 
-    class Firefighter* GetDriver() const { return driver; }
-    void SetDriver(class Firefighter* driver) { this->driver = driver; }
+    class FirefighterBase* GetDriver() const { return driver; }
+    void SetDriver(class FirefighterBase* driver) { this->driver = driver; }
 
 private:
-    class Firefighter* driver = nullptr;
+    class FirefighterBase* driver = nullptr;
     Ladder* ladder = nullptr;
     Hose* hose = nullptr;
 };

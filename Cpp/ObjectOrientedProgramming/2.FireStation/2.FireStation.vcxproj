@@ -146,12 +146,17 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Administrator.h" />
     <ClInclude Include="FireChief.h" />
     <ClInclude Include="Firefighter.h" />
+    <ClInclude Include="FirefighterBase.h" />
+    <ClInclude Include="FireStation.h" />
     <ClInclude Include="Firetruck.h" />
     <ClInclude Include="Hose.h" />
+    <ClInclude Include="INamedPerson.h" />
     <ClInclude Include="Ladder.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="TraineeFirefighter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
