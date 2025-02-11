@@ -185,6 +185,50 @@ namespace Blue
 
         // 픽셀 쉐이더 컴파일/생성.
         // 각 리소스 바인딩.
+        ID3DBlob* pixelShaderBuffer = nullptr;
+        result = D3DCompileFromFile(TEXT("PixelShader.hlsl"), nullptr, nullptr, "main", "ps_5_0", 0u, 0u, &pixelShaderBuffer, nullptr);
+        if (FAILED(result))
+        {
+        	MessageBoxA(
+        		nullptr,
+        		"Failed to compile pixel shader",
+        		"Error",
+        		MB_OK
+        	);
+
+        	__debugbreak();
+        }
+
+        result = device->CreatePixelShader(
+        	pixelShaderBuffer->GetBufferPointer(),
+        	pixelShaderBuffer->GetBufferSize(),
+        	nullptr,
+        	&pixelShader
+        );
+
+        if (FAILED(result))
+        {
+        	MessageBoxA(
+        		nullptr,
+        		"Failed to compile pixel shader",
+        		"Error",
+        		MB_OK
+        	);
+
+        	__debugbreak();
+        }
+
+        uint32 stride = sizeof(float) * 3;
+        uint32 offset = 0u;
+        context->IASetVertexBuffers(0u, 1u, &vertexBuffer, &stride, &offset);
+        context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0u);
+        context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+        context->IASetInputLayout(inputLayout);
+        context->VSSetShader(vertexShader, nullptr, 0u);
+        context->PSSetShader(pixelShader, nullptr, 0u);
+
+
 
     }
     Renderer::~Renderer()
