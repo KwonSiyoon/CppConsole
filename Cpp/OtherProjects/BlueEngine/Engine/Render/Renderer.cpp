@@ -1,6 +1,10 @@
 ﻿#include "Renderer.h"
 #include <vector>
 #include <d3dcompiler.h>
+#include "../Math/Vector3.h"
+//#include "../Shader/Shader.h"
+#include "TriangleMesh.h"
+#include "QuadMesh.h"
 
 namespace Blue
 {
@@ -41,7 +45,7 @@ namespace Blue
         swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 
         // 장치 생성.
-        HRESULT result = D3D11CreateDeviceAndSwapChain(                  
+        HRESULT result = D3D11CreateDeviceAndSwapChain(
             nullptr,                                    // IDXGIAdapter* pAdapter,
             D3D_DRIVER_TYPE_HARDWARE,                   // D3D_DRIVER_TYPE DriverType,
             nullptr,                                    // HMODULE Software,
@@ -95,140 +99,111 @@ namespace Blue
         // 뷰포트 설정.
         context->RSSetViewports(1, &viewport);
 
-        // 정점 데이터 생성.
-        float vertices[] =
-        {
-            0.0f, 0.5f, 0.5f,
-            0.5f, -0.5f, 0.5f
-            -0.5f, -0.5f, 0.5f,
-        };
+        //// 정점 데이터 생성.
+        //Vector3 vertices[] =
+        //{
+        //    Vector3(0.0f, 0.5f, 0.5f),
+        //    Vector3(0.5f, -0.5f, 0.5f),
+        //    Vector3(-0.5f, -0.5f, 0.5f)
+        //};
 
-        // @Temp: 임시 리소스 생성.
-        // 버퍼(Buffer) - 메모리 덩어리.
-        D3D11_BUFFER_DESC vertexBufferDesc = {};
-        vertexBufferDesc.ByteWidth = sizeof(float) * 3 * 3;
-        vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+        //// @Temp: 임시 리소스 생성.
+        //// 버퍼(Buffer) - 메모리 덩어리.
+        //D3D11_BUFFER_DESC vertexBufferDesc = {};
+        //vertexBufferDesc.ByteWidth = Vector3::Stride() * 3;
+        //vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+
+        //// 정점 데이터.
+        //D3D11_SUBRESOURCE_DATA vertexData = {};
+        //vertexData.pSysMem = vertices;
+
+        //// (정점)버퍼 생성.
+        //result = device->CreateBuffer(&vertexBufferDesc, &vertexData, &vertexBuffer);
+
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to create vertex buffer.", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
+        //// 인덱스(색인) 버퍼 생성(정점을 조립하는 순서).
+        //int indices[] = { 0, 1, 2 };
+
+        //// 버퍼(Buffer) - 메모리 덩어리.
+        //D3D11_BUFFER_DESC indexBufferDesc = {};
+        //indexBufferDesc.ByteWidth = sizeof(int) * 3;
+        //indexBufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
+
+        //// 인덱스 데이터.
+        //D3D11_SUBRESOURCE_DATA indexData = {};
+        //indexData.pSysMem = indices;
+
+        //// (인덱스)버퍼 생성.
+        //result = device->CreateBuffer(&indexBufferDesc, &indexData, &indexBuffer);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to create index buffer.", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
+        //// 쉐이더 컴파일.
+        //ID3DBlob* vertexShaderBuffer = nullptr;
+        //result = D3DCompileFromFile(TEXT("VertexShader.hlsl"), nullptr, nullptr, "main", "vs_5_0", 0, 0, &vertexShaderBuffer, nullptr);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to compile vertex shader.", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
+        //// 쉐이더 생성.
+        //result = device->CreateVertexShader(vertexShaderBuffer->GetBufferPointer(), vertexShaderBuffer->GetBufferSize(), nullptr, &vertexShader);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to create vertex shader.", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
+        //// 입력 레이아웃.
+        //// 정점 쉐이더에 전달할 정점 데이터가 어떻게 생겼는지 알려줌.
+        ///*
+        //LPCSTR SemanticName;
+        //UINT SemanticIndex;
+        //DXGI_FORMAT Format;
+        //UINT InputSlot;
+        //UINT AlignedByteOffset;
+        //D3D11_INPUT_CLASSIFICATION InputSlotClass;
+        //UINT InstanceDataStepRate;
+        //*/
+        //D3D11_INPUT_ELEMENT_DESC inputDesc[] =
+        //{
+        //    {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0}
+        //};
+        //result = device->CreateInputLayout(inputDesc, 1, vertexShaderBuffer->GetBufferPointer(), vertexShaderBuffer->GetBufferSize(), &inputLayout);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to create input layout.", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
+        //// 픽셀 쉐이더 컴파일/생성.
+        //// 각 리소스 바인딩.
+        //ID3DBlob* pixelShaderBuffer = nullptr;
+        //result = D3DCompileFromFile(TEXT("PixelShader.hlsl"), nullptr, nullptr, "main", "ps_5_0", 0u, 0u, &pixelShaderBuffer, nullptr);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to compile pixel shader", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
+        //result = device->CreatePixelShader(pixelShaderBuffer->GetBufferPointer(), pixelShaderBuffer->GetBufferSize(), nullptr, &pixelShader);
+
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to compile pixel shader", "Error", MB_OK);
+        //    __debugbreak();
+        //}
+
         
-        // 정점 데이터.
-        D3D11_SUBRESOURCE_DATA vertexData = {};
-        vertexData.pSysMem = vertices;
-
-        // (정점)버퍼 생성.
-        result = device->CreateBuffer(&vertexBufferDesc, &vertexData, &vertexBuffer);
-
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to create vertex buffer.", "Error", MB_OK);
-            __debugbreak();
-        }
-
-        // 인덱스(색인) 버퍼 생성(정점을 조립하는 순서).
-        int indices[] = { 0, 1, 2 };
-
-
-        // @Temp: 임시 리소스 생성.
-        // 버퍼(Buffer) - 메모리 덩어리.
-        D3D11_BUFFER_DESC indexBufferDesc = {};
-        indexBufferDesc.ByteWidth = sizeof(int) * 3;
-        indexBufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
-
-        // 인덱스 데이터.
-        D3D11_SUBRESOURCE_DATA indexData = {};
-        indexData.pSysMem = indices;
-
-        // (인덱스)버퍼 생성.
-        result = device->CreateBuffer(&indexBufferDesc, &indexData, &indexBuffer);
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to create index buffer.", "Error", MB_OK);
-            __debugbreak();
-        }
-
-        // 쉐이더 컴파일.
-        ID3DBlob* vertexShaderBuffer = nullptr;
-        result = D3DCompileFromFile(TEXT("VertexShader.hlsl"), nullptr, nullptr, "main", "vs_5_0", 0, 0, &vertexShaderBuffer, nullptr);
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to compile vertex shader.", "Error", MB_OK);
-            __debugbreak();
-        }
-
-        // 쉐이더 생성.
-        result = device->CreateVertexShader(vertexShaderBuffer->GetBufferPointer(), vertexShaderBuffer->GetBufferSize(), nullptr, &vertexShader);
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to create vertex shader.", "Error", MB_OK);
-            __debugbreak();
-        }
-         
-        // 입력 레이아웃.
-        // 정점 쉐이더에 전달할 정점 데이터가 어떻게 생겼는지 알려줌.
-        /*
-        LPCSTR SemanticName;
-        UINT SemanticIndex;
-        DXGI_FORMAT Format;
-        UINT InputSlot;
-        UINT AlignedByteOffset;
-        D3D11_INPUT_CLASSIFICATION InputSlotClass;
-        UINT InstanceDataStepRate;
-        */
-        D3D11_INPUT_ELEMENT_DESC inputDesc[] =
-        {
-            {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0}
-        };
-        result = device->CreateInputLayout(inputDesc, 1, vertexShaderBuffer->GetBufferPointer(), vertexShaderBuffer->GetBufferSize(), &inputLayout);
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to create input layout.", "Error", MB_OK);
-            __debugbreak();
-        }
-
-        // 픽셀 쉐이더 컴파일/생성.
-        // 각 리소스 바인딩.
-        ID3DBlob* pixelShaderBuffer = nullptr;
-        result = D3DCompileFromFile(TEXT("PixelShader.hlsl"), nullptr, nullptr, "main", "ps_5_0", 0u, 0u, &pixelShaderBuffer, nullptr);
-        if (FAILED(result))
-        {
-        	MessageBoxA(
-        		nullptr,
-        		"Failed to compile pixel shader",
-        		"Error",
-        		MB_OK
-        	);
-
-        	__debugbreak();
-        }
-
-        result = device->CreatePixelShader(
-        	pixelShaderBuffer->GetBufferPointer(),
-        	pixelShaderBuffer->GetBufferSize(),
-        	nullptr,
-        	&pixelShader
-        );
-
-        if (FAILED(result))
-        {
-        	MessageBoxA(
-        		nullptr,
-        		"Failed to compile pixel shader",
-        		"Error",
-        		MB_OK
-        	);
-
-        	__debugbreak();
-        }
-
-        uint32 stride = sizeof(float) * 3;
-        uint32 offset = 0u;
-        context->IASetVertexBuffers(0u, 1u, &vertexBuffer, &stride, &offset);
-        context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0u);
-        context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-
-        context->IASetInputLayout(inputLayout);
-        context->VSSetShader(vertexShader, nullptr, 0u);
-        context->PSSetShader(pixelShader, nullptr, 0u);
-
-
 
     }
     Renderer::~Renderer()
@@ -236,12 +211,49 @@ namespace Blue
     }
     void Renderer::Draw()
     {
+        // 쉐이더 객체 생성.
+        if (mesh == nullptr)
+        {
+            mesh = std::make_unique<QuadMesh>();
+            //mesh = std::make_unique<TriangleMesh>();
+
+        }
+
         // 그리기 전 작업. BeginScene
         // 지우기(Clear)
         float color[] = { 0.6f, 0.7f, 0.8f, 1.0f };
         context->ClearRenderTargetView(renderTargetView, color);
 
         // 드로우(Draw). Draw
+        mesh->Draw();
+        
+        
+        
+        // 리소스 바인딩.
+        // 정점 버퍼 전달.
+        //static unsigned int stride = Vector3::Stride();
+        //static unsigned int offset = 0u;
+        //context->IASetVertexBuffers(0u, 1u, &vertexBuffer, &stride, &offset);
+
+        //// 인덱스 버퍼 전달.
+        //context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0u);
+        //
+
+        //shader->Bind();
+        //// 입력 레이아웃 전달.
+        //context->IASetInputLayout(inputLayout);
+        //
+        //// 조립할 모양 설정.
+        //context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+        //// 쉐이더 설정.
+        //context->VSSetShader(vertexShader, nullptr, 0u);
+        //context->PSSetShader(pixelShader, nullptr, 0u);
+
+        //// 드로우 콜.
+        //context->DrawIndexed(3u, 0u, 0);
+
+
 
         // 버퍼 교환. EndScene / Present.
         swapChain->Present(1u, 0u);

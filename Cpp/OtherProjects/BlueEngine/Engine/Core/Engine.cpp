@@ -1,4 +1,4 @@
-#include "Engine.h"
+﻿#include "Engine.h"
 #include "Window.h"
 #include "../Render/Renderer.h"
 
@@ -66,5 +66,13 @@ namespace Blue
     Engine& Engine::Get()
     {
         return *instance;
+    }
+    ID3D11Device& Engine::Device() const
+    {
+        return *renderer->device;
+    }
+    ID3D11DeviceContext& Engine::Context() const
+    {
+        return *renderer->context;
     }
 }

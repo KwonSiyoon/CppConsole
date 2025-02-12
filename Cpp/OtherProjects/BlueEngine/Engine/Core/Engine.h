@@ -4,6 +4,7 @@
 #include <Windows.h>
 #include <string>
 #include "Type.h"
+#include <d3d11.h>
 
 namespace Blue
 {
@@ -21,6 +22,10 @@ namespace Blue
 
         // 싱글톤 접근함수.
         static Engine& Get();
+
+        // Getter.
+        ID3D11Device& Device() const;
+        ID3D11DeviceContext& Context() const;
 
     protected:
         // 창 객체.
