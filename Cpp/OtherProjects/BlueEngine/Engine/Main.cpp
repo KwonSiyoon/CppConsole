@@ -7,6 +7,11 @@
 
 #include "Math/Vector2.h"
 
+using namespace Blue;
+#pragma region surplus
+
+
+
 //// 창에 관련된 메시지를 처리하는 콜백 함수.
 //LRESULT CALLBACK WindowProc(HWND handle, UINT message, WPARAM wparam, LPARAM lparam)
 //{
@@ -28,7 +33,6 @@
 //
 //}
 
-using namespace Blue;
 
 // 창 모드로 할 때 메인 함수(Entry Point).
 // 콘솔 모드에서의 int main(){}의 역할.
@@ -175,11 +179,13 @@ using namespace Blue;
 //    return 0;
 //}
 
+#pragma endregion
 
 
 int main()
 {
     std::cout << "테스트\n";
+
 
     Engine engine(1280, 800, TEXT("Title"), GetModuleHandle(nullptr));
     engine.Run();

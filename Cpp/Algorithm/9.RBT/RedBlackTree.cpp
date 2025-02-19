@@ -361,7 +361,7 @@ void RedBlackTree::RestructureAfterRemove(Node* node)
 
             continue;
         }
-        root->SetColor(Color::Black);
+        node->SetColor(Color::Black);
     }
 
 }
