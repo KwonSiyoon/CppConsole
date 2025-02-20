@@ -125,6 +125,7 @@ void MinesweeperLevel::Initialize(const Vector2& gameSize, const Vector2& startP
                     std::bind(&MinesweeperLevel::DecreaseMineCount, this)
                 );
                 mines.push_back(mine);
+                minesMap[{mine->Position().x, mine->Position().y}] = mine;
                 actors.PushBack(mine);
             }
             else
@@ -135,6 +136,7 @@ void MinesweeperLevel::Initialize(const Vector2& gameSize, const Vector2& startP
                     [this]() {--indicatorCounts; }
                 );
                 indicators.push_back(indicator);
+                indicatorsMap[{ indicator->Position().x, indicator->Position().y}] = indicator;
                 actors.PushBack(indicator);
             }
         }
@@ -150,7 +152,7 @@ void MinesweeperLevel::MouseEvent()
     static INPUT_RECORD rec;
     static DWORD dwRead;
     static HANDLE hCin = GetStdHandle(STD_INPUT_HANDLE);
-    static HANDLE hCout = GetStdHandle(STD_OUTPUT_HANDLE);
+    //static HANDLE hCout = GetStdHandle(STD_OUTPUT_HANDLE);
     // 현재 콘솔 정보 가져오기
     static CONSOLE_SCREEN_BUFFER_INFO csbi;
 
@@ -174,38 +176,93 @@ void MinesweeperLevel::MouseEvent()
 
             if (rec.Event.MouseEvent.dwButtonState == FROM_LEFT_1ST_BUTTON_PRESSED)
             {
-                for (auto* actor : mines)
+                auto iter = minesMap.find({ x,y });
+                if (iter != minesMap.end())
                 {
-                    if (actor->Position() == Vector2(x, y))
-                    {
-                        actor->Open();
-                        GameOver();
-                        return;
-                    }
+                    iter->second->Open();
+                    GameOver();
+                    return;
                 }
-                for (auto* actor : indicators)
+                auto iter2 = indicatorsMap.find({ x,y });
+                if (iter2 != indicatorsMap.end())
                 {
-                    if (actor->Position() == Vector2(x, y))
+                    int gameX = x - (startPos.x + 1);  // startPos.x(2) + 1
+                    int gameY = y - (startPos.y + 1);  // startPos.y(2) + 1
+                    if (mapArray[gameY][gameX] == 0)
                     {
-                        //actor->IsOpened();
-                        // 클릭한 위치를 게임 좌표로 변환 (startPos 고려)
-                        int gameX = x - (startPos.x + 1);  // startPos.x(2) + 1
-                        int gameY = y - (startPos.y + 1);  // startPos.y(2) + 1
-                        if (mapArray[gameY][gameX] == 0)
-                        {
-                            OpenSurroundingZeros(gameX, gameY);
-                        }
-                        else
-                        {
-                            actor->Open();
-                        }
-                        return;
+                        OpenSurroundingZeros(gameX, gameY);
                     }
+                    else
+                    {
+                        iter2->second->Open();
+                    }
+                    return;
+                    
                 }
+                //for (auto* actor : mines)
+                //{
+                //    if (actor->Position() == Vector2(x, y))
+                //    {
+                //        actor->Open();
+                //        GameOver();
+                //        return;
+                //    }
+                //}
+                //for (auto* actor : indicators)
+                //{
+                //    if (actor->Position() == Vector2(x, y))
+                //    {
+                //        //actor->IsOpened();
+                //        // 클릭한 위치를 게임 좌표로 변환 (startPos 고려)
+                //        int gameX = x - (startPos.x + 1);  // startPos.x(2) + 1
+                //        int gameY = y - (startPos.y + 1);  // startPos.y(2) + 1
+                //        if (mapArray[gameY][gameX] == 0)
+                //        {
+                //            OpenSurroundingZeros(gameX, gameY);
+                //        }
+                //        else
+                //        {
+                //            actor->Open();
+                //        }
+                //        return;
+                //    }
+                //}
             }
             else if (rec.Event.MouseEvent.dwButtonState == RIGHTMOST_BUTTON_PRESSED)
             {
-                for (auto* actor : mines)
+                auto iter = minesMap.find({ x,y });
+                if (iter != minesMap.end())
+                {
+                    Mine* actor = iter->second;
+                    actor->OnFlag();
+                    if (actor->GetFlag())
+                    {
+                        --mineCounts;
+                    }
+                    else
+                    {
+                        ++mineCounts;
+                    }
+                    return;
+                }
+
+                auto iter2 = indicatorsMap.find({ x,y });
+                if (iter2 != indicatorsMap.end())
+                {
+                    MineIndicator* actor = iter2->second;
+                    actor->OnFlag();
+                    if (actor->GetFlag())
+                    {
+                        --mineCounts;
+                    }
+                    else
+                    {
+                        ++mineCounts;
+                    }
+                    return;
+                }
+                
+                /*for (auto* actor : mines)
                 {
                     if (actor->Position() == Vector2(x, y))
                     {
@@ -220,8 +277,8 @@ void MinesweeperLevel::MouseEvent()
                         }
                         return;
                     }
-                }
-                for (auto* actor : indicators)
+                }*/
+                /*for (auto* actor : indicators)
                 {
                     if (actor->Position() == Vector2(x, y))
                     {
@@ -236,7 +293,7 @@ void MinesweeperLevel::MouseEvent()
                         }
                         return;
                     }
-                }
+                }*/
             }
         }
     }
@@ -290,7 +347,8 @@ void MinesweeperLevel::OpenSurroundingZeros(int x, int y)
             continue;
 
         // 해당 위치의 indicator 찾기
-        MineIndicator* indicator = GetIndicatorAt(x + startPos.x+1, y + startPos.y +1);
+        //MineIndicator* indicator = GetIndicatorAt(x + startPos.x+1, y + startPos.y +1);
+        MineIndicator* indicator = FindIndicatorAt(x + startPos.x+1, y + startPos.y +1);
 
         // indicator가 없거나(지뢰 위치) 이미 열려있으면 스킵
         if (!indicator || indicator->GetOpened())
@@ -353,6 +411,22 @@ MineIndicator* MinesweeperLevel::GetIndicatorAt(int x, int y)
         if (indicator->Position() == Vector2(x, y))
             return indicator;
     }
+    return nullptr;
+}
+
+MineIndicator* MinesweeperLevel::FindIndicatorAt(int x, int y)
+{
+    auto iter = indicatorsMap.find({x, y});
+    if (iter != indicatorsMap.end())
+    {
+        return iter->second;
+    }
+    
+    /*for (auto* indicator : indicators)
+    {
+        if (indicator->Position() == Vector2(x, y))
+            return indicator;
+    }*/
     return nullptr;
 }
 
