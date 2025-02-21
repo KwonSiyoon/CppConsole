@@ -265,7 +265,7 @@ void RedBlackTree::RestructureAfterRemove(Node* node)
 
                 // 좌회전.
                 RotateToLeft(node->Parent());
-                continue;
+                //continue;
             }
 
             // Case2: 형제 노드가 블랙.
@@ -299,10 +299,11 @@ void RedBlackTree::RestructureAfterRemove(Node* node)
                 sibling->SetColor(sibling->Parent()->GetColor());
                 sibling->Parent()->SetColor(Color::Black);
                 sibling->Right()->SetColor(Color::Black);
+                // 좌회전
                 RotateToLeft(node->Parent());
             }
 
-            continue;
+            //continue;
 
         }
         else
@@ -322,7 +323,7 @@ void RedBlackTree::RestructureAfterRemove(Node* node)
 
                 // 우회전.
                 RotateToRight(node->Parent());
-                continue;
+                //continue;
             }
 
             // Case2: 형제 노드가 블랙.
@@ -356,14 +357,16 @@ void RedBlackTree::RestructureAfterRemove(Node* node)
                 sibling->SetColor(sibling->Parent()->GetColor());
                 sibling->Parent()->SetColor(Color::Black);
                 sibling->Left()->SetColor(Color::Black);
+                // 우회전.
                 RotateToRight(node->Parent());
+                node = root;
             }
 
-            continue;
+            //continue;
         }
-        node->SetColor(Color::Black);
+        
     }
-
+    node->SetColor(Color::Black);
 }
 
 void RedBlackTree::RotateToLeft(Node* node)
