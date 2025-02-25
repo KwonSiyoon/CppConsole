@@ -24,10 +24,13 @@ AStar::~AStar()
 		SafeDelete(node);
 	}
 	closedList.clear();
+
+    SafeDelete(goalNode);
 }
 
 std::vector<Node*> AStar::FindPath(Node* startNode, Node* goalNode, const std::vector<std::vector<int>>& grid)
 {
+    
 	this->startNode = startNode;
 	this->goalNode = goalNode;
 
@@ -235,6 +238,7 @@ std::vector<Node*> AStar::FindPath(Actor* startActor, Actor* endActor)
             int newX = currentNode->position.x + direction.x;
             int newY = currentNode->position.y + direction.y;
 
+            bool check = IsInRange(newX, newY, startNode, goalNode);
             // 그리드 밖이면 무시.
             if (!IsInRange(newX, newY, startNode, goalNode))
             {
@@ -337,7 +341,7 @@ bool AStar::IsInRange(int x, int y, Node* startNode, Node* goalNode)
     int maxY = startNode->position.y <= goalNode->position.y ? goalNode->position.y : startNode->position.y;
     int minY = startNode->position.y >= goalNode->position.y ? goalNode->position.y : startNode->position.y;
 
-    if (x >= minX && x <= maxX && y <= maxY && minY)
+    if (x >= minX && x <= maxX && y <= maxY && y >= minY)
     {
         return true;
     }

@@ -1,16 +1,16 @@
-#include "PreCompiledHeader.h"
+ï»¿#include "PreCompiledHeader.h"
 #include "DrawableActor.h"
 #include "Engine/Engine.h"
 
 DrawableActor::DrawableActor(const char* image)
 	: Actor()/*, image(image)*/
 {
-	// Àü´Þ ¹ÞÀº ¹®ÀÚ¿­ º¹»ç.
+	// ì „ë‹¬ ë°›ì€ ë¬¸ìžì—´ ë³µì‚¬.
 	auto length = strlen(image) + 1;
 	this->image = new char[length];
 	strcpy_s(this->image, length, image);
 
-	// ³Êºñ ¼³Á¤.
+	// ë„ˆë¹„ ì„¤ì •.
 	width = (int)strlen(image);
 }
 
@@ -23,29 +23,28 @@ void DrawableActor::Draw()
 {
 	Super::Draw();
 
-	// »ö»ó ¼³Á¤.
+	// ìƒ‰ìƒ ì„¤ì •.
 	//Engine::Get().SetColor(color);
 
-	// ±×¸®±â.
-	// 1´Ü°è: ÄÜ¼Ö ÁÂÇ¥ ¿Å±â±â.
+	// ê·¸ë¦¬ê¸°.
+	// 1ë‹¨ê³„: ì½˜ì†” ì¢Œí‘œ ì˜®ê¸°ê¸°.
 	//Engine::Get().SetCursorPosition(position);
 
-	// 2´Ü°è: ±×¸®±â (ÄÜ¼Ö Ãâ·Â).
+	// 2ë‹¨ê³„: ê·¸ë¦¬ê¸° (ì½˜ì†” ì¶œë ¥).
 	//Log(image);
-
 	Engine::Get().Draw(position, image, color);
 
-	// »ö»ó º¹±¸.
+	// ìƒ‰ìƒ ë³µêµ¬.
 	//Engine::Get().SetColor(Color::White);
 }
 
 void DrawableActor::SetPosition(const Vector2& newPosition)
 {
-	//// ÀÌÀüÀÇ À§Ä¡¸¦ ¸ÕÀú Áö¿ì±â.
+	//// ì´ì „ì˜ ìœ„ì¹˜ë¥¼ ë¨¼ì € ì§€ìš°ê¸°.
 	//Engine::Get().SetCursorPosition(position);
 	//Log(" ");
 
-	// À§Ä¡¸¦ »õ·Î ¿Å±â±â.
+	// ìœ„ì¹˜ë¥¼ ìƒˆë¡œ ì˜®ê¸°ê¸°.
 	Super::SetPosition(newPosition);
 }
 
@@ -53,26 +52,26 @@ bool DrawableActor::Intersect(const DrawableActor& other)
 {
 	// AABB(Axis Aligned Bounding Box).
 
-	// ³» xÁÂÇ¥ ÃÖ¼Ò/ÃÖ´ë.
+	// ë‚´ xì¢Œí‘œ ìµœì†Œ/ìµœëŒ€.
 	int min = position.x;
 	int max = position.x + width;
 
-	// ´Ù¸¥ ¾×ÅÍÀÇ xÁÂÇ¥ ÃÖ¼Ò/ÃÖ´ë.
+	// ë‹¤ë¥¸ ì•¡í„°ì˜ xì¢Œí‘œ ìµœì†Œ/ìµœëŒ€.
 	int otherMin = other.position.x;
 	int otherMax = other.position.x + other.width;
 
-	// ´Ù¸¥ ¾×ÅÍÀÇ ¿ÞÂÊ ³¡ À§Ä¡°¡ ³» ¿À¸¥ÂÊ ³¡ À§Ä¡¸¦ ¹þ¾î³ª¸é Ãæµ¹ ¾ÈÇÔ.
+	// ë‹¤ë¥¸ ì•¡í„°ì˜ ì™¼ìª½ ë ìœ„ì¹˜ê°€ ë‚´ ì˜¤ë¥¸ìª½ ë ìœ„ì¹˜ë¥¼ ë²—ì–´ë‚˜ë©´ ì¶©ëŒ ì•ˆí•¨.
 	if (otherMin > max)
 	{
 		return false;
 	}
 
-	// ´Ù¸¥ ¾×ÅÍÀÇ ¿À¸¥ÂÊ ³¡ À§Ä¡°¡ ³» ¿ÞÂÊ ³¡ À§Ä¡º¸´Ù ÀÛÀ¸¸é Ãæµ¹ ¾ÈÇÔ.
+	// ë‹¤ë¥¸ ì•¡í„°ì˜ ì˜¤ë¥¸ìª½ ë ìœ„ì¹˜ê°€ ë‚´ ì™¼ìª½ ë ìœ„ì¹˜ë³´ë‹¤ ìž‘ìœ¼ë©´ ì¶©ëŒ ì•ˆí•¨.
 	if (otherMax < min)
 	{
 		return false;
 	}
 
-	// À§ÀÇ µÎ °æ¿ì°¡ ¾Æ´Ï¶ó¸é (xÁÂÇ¥´Â ¼­·Î °ãÄ§), yÀ§Ä¡ ºñ±³.
+	// ìœ„ì˜ ë‘ ê²½ìš°ê°€ ì•„ë‹ˆë¼ë©´ (xì¢Œí‘œëŠ” ì„œë¡œ ê²¹ì¹¨), yìœ„ì¹˜ ë¹„êµ.
 	return position.y == other.position.y;
 }

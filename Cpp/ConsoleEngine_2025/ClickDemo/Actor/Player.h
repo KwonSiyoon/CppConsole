@@ -1,6 +1,7 @@
-#pragma once
+﻿#pragma once
 
 #include "Actor/DrawableActor.h"
+#include <vector>
 
 class Player : public DrawableActor
 {
@@ -8,6 +9,4 @@ class Player : public DrawableActor
 
 public:
 	Player();
-
-	virtual void Update(float deltaTime) override;
 };
