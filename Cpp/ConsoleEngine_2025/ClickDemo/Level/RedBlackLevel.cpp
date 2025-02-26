@@ -55,15 +55,16 @@ void RedBlackLevel::PrintRedBlackTree()
 
 void RedBlackLevel::PrintRecursive(TreeNode* node, const Vector2& nowPostion, int depth)
 {
+    if (node == tree->Nil())
+    {
+        return;
+    }
+
     int xSize = Game::Get().ScreenSize().x;
     int leftPosition = (int)(-xSize * 0.25f);
     int rightPosition = (int)(xSize * 0.25f);
     Vector2 nowPosition = nowPostion;
     TreeNodeActor* nodeActor = nullptr;
-    if (node == tree->Nil())
-    {
-        return;
-    }
 
     if (node->Parent())
     {
