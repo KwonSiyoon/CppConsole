@@ -188,6 +188,7 @@
     <ClCompile Include="Actor\Road.cpp" />
     <ClCompile Include="Actor\Player.cpp" />
     <ClCompile Include="Actor\Start.cpp" />
+    <ClCompile Include="Actor\TreeNodeActor.cpp" />
     <ClCompile Include="Algorithm\AStar.cpp" />
     <ClCompile Include="Algorithm\RedBlackTree.cpp" />
     <ClCompile Include="Algorithm\TreeNode.cpp" />
@@ -199,9 +200,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\End.h" />
+    <ClInclude Include="Actor\MenuActor.h" />
     <ClInclude Include="Actor\Road.h" />
     <ClInclude Include="Actor\Player.h" />
     <ClInclude Include="Actor\Start.h" />
+    <ClInclude Include="Actor\TreeNodeActor.h" />
     <ClInclude Include="Algorithm\AStar.h" />
     <ClInclude Include="Algorithm\RedBlackTree.h" />
     <ClInclude Include="Algorithm\TreeNode.h" />

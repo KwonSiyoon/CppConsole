@@ -31,31 +31,29 @@ void DemoLevel::Update(float deltaTime)
 {
     Level::Update(deltaTime);
     timer->Update(deltaTime);
-    /*if (Engine::Get().GetKeyDown(VK_ESCAPE))
-    {
-        Engine::Get().QuitGame();
-    }*/
-    if (Game::Get().GetKeyDown(VK_ESCAPE))
-    {
-        Game::Get().ToggleMenu();
-    }
-    if (Engine::Get().GetKeyDown(VK_SPACE))
+    
+    if (Game::Get().GetKeyDown(VK_SPACE))
     {
         MakeAStarRoad();
     }
-    if (Engine::Get().GetKeyDown(VK_RBUTTON))
+    if (Game::Get().GetKeyDown(VK_RBUTTON))
     {
         ResetRoad();
-        endActor->SetPosition(Engine::Get().MousePosition());
+        endActor->SetPosition(Game::Get().MousePosition());
     }
-    if (Engine::Get().GetKeyDown(VK_LBUTTON))
+    if (Game::Get().GetKeyDown(VK_LBUTTON))
     {
         ResetRoad();
-        startActor->SetPosition(Engine::Get().MousePosition());
+        startActor->SetPosition(Game::Get().MousePosition());
     }
-    if (Engine::Get().GetKeyDown(VK_TAB))
+    if (Game::Get().GetKeyDown(VK_TAB))
     {
         if (actorsInRoad.empty()) return;
+        if (player)
+        {
+            player->Destroy();
+            player = nullptr;
+        }
         player = new Player();
         player->SetPosition(startActor->Position());
         AddActor(player);
@@ -66,7 +64,10 @@ void DemoLevel::Update(float deltaTime)
     {
         MovePlayerAlongRoad();
     }
-
+    if (Game::Get().GetKeyDown(VK_ESCAPE))
+    {
+        Game::Get().ToggleMenu();
+    }
     
 }
 

@@ -1,8 +1,6 @@
 ﻿#include "RedBlackTree.h"
 #include "Core.h"
 
-TreeNode* RedBlackTree::nil = nullptr;
-
 TreeNode* RedBlackTree::CreateNode(int data, NodeColor color)
 {
     TreeNode* newNode = new TreeNode(data, color);

@@ -10,7 +10,8 @@ public:
 
 	void ToggleMenu();
     void ClearAndLoadLevel(Level* level);
-    void GoToMain();
+    void GoToRedBlackLevel();
+    void GoToAStar();
 
 	static Game& Get() { return *instance; }
 

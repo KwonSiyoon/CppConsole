@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Core.h"
 
@@ -8,14 +8,18 @@ public:
 	Vector2(int x = 0, int y = 0);
 	~Vector2() = default;
 
-	// ¿¬»êÀÚ ¿À¹ö·Îµù.
+	// ì—°ì‚°ì ì˜¤ë²„ë¡œë”©.
 	Vector2 operator+(const Vector2& other);
 	Vector2 operator-(const Vector2& other);
 	bool operator==(const Vector2& other);
 	bool operator!=(const Vector2& other);
 
+    Vector2 operator*(int value);
+    Vector2 operator/(int value);
+
+
 public:
-	// xÁÂÇ¥ / yÁÂÇ¥.
+	// xì¢Œí‘œ / yì¢Œí‘œ.
 	int x = 0;
 	int y = 0;
 };

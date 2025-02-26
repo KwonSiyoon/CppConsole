@@ -2,6 +2,7 @@
 
 #include "Level/MenuLevel.h"
 #include "Level/DemoLevel.h"
+#include "Level/RedBlackLevel.h"
 #include "Actor/Actor.h"
 
 Game* Game::instance = nullptr;
@@ -10,7 +11,6 @@ Game::Game()
 	: Engine()
 {
 	instance = this;
-
 	menuLevel = new MenuLevel();
 }
 
@@ -34,8 +34,7 @@ Game::~Game()
 
 void Game::ToggleMenu()
 {
-	system("cls");
-	//Clear();
+	Clear();
 	showMenu = !showMenu;
 	if (showMenu)
 	{
@@ -58,9 +57,18 @@ void Game::ClearAndLoadLevel(Level* level)
     LoadLevel(level);
 }
 
-void Game::GoToMain()
+void Game::GoToRedBlackLevel()
 {
     ToggleMenu();
-    system("cls");
+    Clear();
+    ClearAndLoadLevel(new RedBlackLevel());
+}
+
+void Game::GoToAStar()
+{
+    ToggleMenu();
+    Clear();
     ClearAndLoadLevel(new DemoLevel());
 }
+
+

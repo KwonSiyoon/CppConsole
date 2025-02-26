@@ -24,6 +24,9 @@ public:
     // 노드 출력 함수.
     void Print(int depth = 0, int blackCount = 0);
 
+    TreeNode* Root() { return root; }
+    TreeNode* Nil() { return nil; }
+
 private:
     // 노드 생성 함수.
     TreeNode* CreateNode(int data, NodeColor color);
@@ -69,7 +72,7 @@ private:
     TreeNode* root = nullptr;
 
     // Nil 노드.
-    static TreeNode* nil;
+    TreeNode* nil = nullptr;
 
 };
 
