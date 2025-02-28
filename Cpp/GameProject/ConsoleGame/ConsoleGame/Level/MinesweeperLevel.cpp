@@ -165,7 +165,7 @@ void MinesweeperLevel::MouseEvent()
     //    [in]  DWORD nLength,                  // 읽을 이벤트의 수
     //    [out] LPDWORD lpNumberOfEventsRead    // 실제로 읽은 이벤트의 수를 저장할 포인터
     //);
-    if (ReadConsoleInput(hCin, &rec, 1, &dwRead))
+    while (ReadConsoleInput(hCin, &rec, 1, &dwRead))
     {
         if (rec.EventType == MOUSE_EVENT)
         {
