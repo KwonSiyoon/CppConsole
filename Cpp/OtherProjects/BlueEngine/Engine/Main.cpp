@@ -181,11 +181,29 @@ using namespace Blue;
 
 #pragma endregion
 
+#include "Core/Common.h"
+#include <typeinfo>
+#include "Shader/Shader.h"
+#include "Shader/TextureMappingShader.h"
+
+template<typename T, typename std::enable_if<std::is_base_of<Shader, T>::value>::type* = nullptr>
+void TestClass()
+{
+    std::boolalpha(std::cout);
+    std::cout << typeid(T).name() << "\n";
+    std::cout << std::is_base_of<Shader, T>::value << "\n";
+}
+
 
 int main()
 {
-    std::cout << "테스트\n";
+    TestClass<TextureMappingShader>();
 
+
+    //std::cout << "테스트\n";
+    
+    //ThrowIfFailed(E_FAIL, TEXT("Text"));
+    
 
     Engine engine(1280, 800, TEXT("Title"), GetModuleHandle(nullptr));
     engine.Run();

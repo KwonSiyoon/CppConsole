@@ -5,6 +5,7 @@
 //#include "../Shader/Shader.h"
 #include "TriangleMesh.h"
 #include "QuadMesh.h"
+#include "Core/Common.h"    
 
 namespace Blue
 {
@@ -36,16 +37,16 @@ namespace Blue
         swapChainDesc.Windowed = true;              // 창 모드.
         swapChainDesc.OutputWindow = window;
         swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-        swapChainDesc.BufferCount = 1;              // 백버퍼 개수.
+        swapChainDesc.BufferCount = 2;              // 백버퍼 개수.
         swapChainDesc.SampleDesc.Count = 1;         // 멀티 샘플링 개수.
         swapChainDesc.SampleDesc.Quality = 0;       // 멀티 샘플링 수준.
         swapChainDesc.BufferDesc.Width = width;
         swapChainDesc.BufferDesc.Height = height;
         swapChainDesc.BufferDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
-        swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
+        swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
 
         // 장치 생성.
-        HRESULT result = D3D11CreateDeviceAndSwapChain(
+        ThrowIfFailed(D3D11CreateDeviceAndSwapChain(
             nullptr,                                    // IDXGIAdapter* pAdapter,
             D3D_DRIVER_TYPE_HARDWARE,                   // D3D_DRIVER_TYPE DriverType,
             nullptr,                                    // HMODULE Software,
@@ -58,19 +59,19 @@ namespace Blue
             &device,                                    // ID3D11Device** ppDevice,
             nullptr,                                    // D3D_FEATURE_LEVEL* pFeatureLevel,
             &context                                    // ID3D11DeviceContext** ppImmediateContext
-        );
+        ), TEXT("Failed to create devices."));
 
         // 결과 확인.
-        if (FAILED(result))
+        /*if (FAILED(result))
         {
             MessageBoxA(nullptr, "Failed to create devices.", "Error", MB_OK);
             __debugbreak();
-        }
+        }*/
 
         // 렌더 타겟 뷰 생성.
         ID3D11Texture2D* backbuffer = nullptr;
         //swapChain->GetBuffer(0, __uuidof(backbuffer), reinterpret_cast<void**>(&backbuffer));
-        result = swapChain->GetBuffer(0, IID_PPV_ARGS(&backbuffer));
+        auto result = swapChain->GetBuffer(0, IID_PPV_ARGS(&backbuffer));
         if (FAILED(result))
         {
             MessageBoxA(nullptr, "Failed to get back buffer.", "Error", MB_OK);
@@ -220,9 +221,15 @@ namespace Blue
         }
 
         // 그리기 전 작업. BeginScene
+        context->OMSetRenderTargets(1, &renderTargetView, nullptr);
+
+
         // 지우기(Clear)
         float color[] = { 0.6f, 0.7f, 0.8f, 1.0f };
         context->ClearRenderTargetView(renderTargetView, color);
+
+        // @Test.
+        mesh->Update(1.0f / 60.0f);
 
         // 드로우(Draw). Draw
         mesh->Draw();

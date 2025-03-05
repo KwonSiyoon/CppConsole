@@ -49,7 +49,7 @@ namespace Blue
         //std::unique_ptr<class Shader> shader;
 
         // 삼각형 메시 객체
-        std::unique_ptr<class Mesh> mesh;
+        std::unique_ptr<class QuadMesh> mesh;
 
         //// 입력 레이아웃.
         //ID3D11InputLayout* inputLayout = nullptr;

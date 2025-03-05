@@ -15,7 +15,8 @@ namespace Blue
 
     private:
         // 텍스쳐 리소스.
-        std::unique_ptr<class Texture> texture;
+        //std::unique_ptr<class Texture> texture;
+        std::weak_ptr<class Texture> texture;
     };
 
 }

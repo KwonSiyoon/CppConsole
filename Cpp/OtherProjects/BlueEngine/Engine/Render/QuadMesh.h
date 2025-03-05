@@ -7,6 +7,13 @@ namespace Blue
     {
     public:
         QuadMesh();
+
+        void Update(float deltaTime);
+
+    private:
+        void Rotate(float angle);
+
+
     };
 
 }
