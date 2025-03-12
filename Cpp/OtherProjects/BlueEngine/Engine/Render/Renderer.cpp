@@ -7,6 +7,7 @@
 #include "QuadMesh.h"
 #include "Core/Common.h"    
 
+
 namespace Blue
 {
 	Renderer::Renderer(uint32 width, uint32 height, HWND window)
@@ -114,6 +115,8 @@ namespace Blue
 		// 렌더 타겟 뷰 바인딩(연결). 
 		//context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 
+        backbuffer->Release();
+        backbuffer = nullptr;
 
 		// 뷰포트(화면).
 		viewport.TopLeftX = 0.0f;
@@ -235,6 +238,38 @@ namespace Blue
 	}
 	Renderer::~Renderer()
 	{
+        if (context)
+        {
+            context->ClearState();
+            context->Flush();
+            context->Release();
+            context = nullptr;
+        }
+        if (swapChain)
+        {
+            swapChain->Release();
+            swapChain = nullptr;
+        }
+        if (renderTargetView)
+        {
+            renderTargetView->Release();
+            renderTargetView = nullptr;
+        }
+
+        /*ID3D11Debug* debug = nullptr;
+        device->QueryInterface(IID_PPV_ARGS(&debug));*/
+        if (device)
+        {
+            device->Release();
+            device = nullptr;
+        }
+
+        mesh.reset();
+        mesh2.reset();
+        mesh3.reset();
+
+        /*debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL | D3D11_RLDO_IGNORE_INTERNAL);
+        debug->Release();*/
 	}
 	void Renderer::Draw()
 	{

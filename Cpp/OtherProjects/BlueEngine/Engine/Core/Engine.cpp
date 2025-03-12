@@ -29,11 +29,13 @@ namespace Blue
 
         // 렌더러 생성.
         renderer = std::make_shared<Renderer>(width, height, window->Handle());
-
-
     }
     Engine::~Engine()
     {
+        //shaderLoader.reset();
+        //modelLoader.reset();
+        //renderer.reset();
+        //textureLoader.reset();
     }
     LRESULT Engine::WindowProc(HWND handle, UINT message, WPARAM wparam, LPARAM lparam)
     {

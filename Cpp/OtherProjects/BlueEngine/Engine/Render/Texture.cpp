@@ -17,6 +17,7 @@ namespace Blue
     }
     Texture::~Texture()
     {
+        textureData.reset();
     }
     void Texture::Bind()
     {
