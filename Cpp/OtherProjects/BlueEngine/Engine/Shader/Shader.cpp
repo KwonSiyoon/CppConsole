@@ -1,6 +1,6 @@
 ﻿#include "Shader.h"
 #include <d3dcompiler.h>
-#include "../Core/Engine.h"
+#include "Core/Engine.h"
 
 namespace Blue
 {
@@ -15,12 +15,12 @@ namespace Blue
         // 쉐이더 컴파일.
         //ID3DBlob* vertexShaderBuffer = nullptr;
         //auto result = D3DCompileFromFile(TEXT("VertexShader.hlsl"), nullptr, nullptr, "main", "vs_5_0", 0, 0, &vertexShaderBuffer, nullptr);
-        /*auto result = D3DCompileFromFile(path, nullptr, nullptr, "main", "vs_5_0", 0, 0, &vertexShaderBuffer, nullptr);
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to compile vertex shader.", "Error", MB_OK);
-            __debugbreak();
-        }*/
+        //auto result = D3DCompileFromFile(path, nullptr, nullptr, "main", "vs_5_0", 0, 0, &vertexShaderBuffer, nullptr);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to compile vertex shader.", "Error", MB_OK);
+        //    __debugbreak();
+        //}
 
         ID3D11Device& device = Engine::Get().Device();
         //auto device = Engine::Get().Device();
@@ -64,12 +64,12 @@ namespace Blue
         //ID3DBlob* pixelShaderBuffer = nullptr;
         swprintf_s(path, 256, L"../CompiledShader/%sPixelShader.cso", name.c_str());
         //result = D3DCompileFromFile(TEXT("PixelShader.hlsl"), nullptr, nullptr, "main", "ps_5_0", 0u, 0u, &pixelShaderBuffer, nullptr);
-        /*result = D3DCompileFromFile(path, nullptr, nullptr, "main", "ps_5_0", 0u, 0u, &pixelShaderBuffer, nullptr);
-        if (FAILED(result))
-        {
-            MessageBoxA(nullptr, "Failed to compile pixel shader", "Error", MB_OK);
-            __debugbreak();
-        }*/
+        //result = D3DCompileFromFile(path, nullptr, nullptr, "main", "ps_5_0", 0u, 0u, &pixelShaderBuffer, nullptr);
+        //if (FAILED(result))
+        //{
+        //    MessageBoxA(nullptr, "Failed to compile pixel shader", "Error", MB_OK);
+        //    __debugbreak();
+        //}
 
         // CSO 로드. cso파일 - 쉐이더 컴파일 결과 파일.
         result = D3DReadFileToBlob(path, &pixelShaderBuffer);

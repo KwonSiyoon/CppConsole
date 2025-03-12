@@ -39,7 +39,9 @@ namespace Blue
 
         // 창 크기 조정.
         RECT rect = { 0, 0, (long)width, (long)height };
-        AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
+        // 제목 포함 1280x800인걸 클라이언트 크기만 1280x800인 창으로 만들기.
+        AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);    
+        // GetClientRect - 제목쪽 크기를 제외한 내부 창 크기 가져오기.
 
         // 창 크기 재설정.
         unsigned int windowWidth = rect.right - rect.left;

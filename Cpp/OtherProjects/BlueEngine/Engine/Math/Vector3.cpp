@@ -65,7 +65,7 @@ namespace Blue
     }
     Vector3 Vector3::Normalized()
     {
-        int length = Length();
+        float length = Length();
         return Vector3(x / length, y / length, z / length);
         //return *this / length;
     }

@@ -27,7 +27,7 @@ namespace Blue
         Matrix4 transformMatrix;
 
         // 상수 버퍼.
-        ID3D11Buffer* contantBuffer = nullptr;
+        ID3D11Buffer* constantBuffer = nullptr;
 
     };
 

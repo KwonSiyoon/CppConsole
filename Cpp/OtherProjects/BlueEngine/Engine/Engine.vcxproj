@@ -95,6 +95,7 @@
     <ClCompile Include="Render\Renderer.cpp" />
     <ClCompile Include="Math\Vector3.cpp" />
     <ClCompile Include="Render\Texture.cpp" />
+    <ClCompile Include="Resource\ModelLoader.cpp" />
     <ClCompile Include="Resource\TextureLoader.cpp" />
     <ClCompile Include="Shader\DefaultShader.cpp" />
     <ClCompile Include="Shader\Shader.cpp" />
@@ -116,6 +117,7 @@
     <ClInclude Include="Render\Renderer.h" />
     <ClInclude Include="Math\Vector3.h" />
     <ClInclude Include="Render\Texture.h" />
+    <ClInclude Include="Resource\ModelLoader.h" />
     <ClInclude Include="Resource\ShaderLoader.h" />
     <ClInclude Include="Resource\TextureLoader.h" />
     <ClInclude Include="Shader\DefaultShader.h" />
