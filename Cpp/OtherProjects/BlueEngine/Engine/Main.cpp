@@ -3,14 +3,45 @@
 //#include "Core/Window.h"
 //#include "Render/Renderer.h"
 #include "Core/Engine.h"
+#include "Level/DemoLevel.h"
 #include <iostream>
 
-#include "Math/Vector2.h"
+//#include "Math/Vector2.h"
 
 using namespace Blue;
+
+/*
+* Done List
+* - Actor(Entity/GameObject) / Component / Scene(Level).
+* Todo List
+* - Input Controller (Window Message Process).
+* - FBX Loader (Assimp/FBX SDK -> Submesh).
+* - Camera (View / Projection(Perspective/Orthographic)).
+*   - Screen Coordinate System (NDC - Normalized Device Coordinates).
+* - Shade (Shader) (Light / Brightness / Darkness).
+*   - Ambient(Static/GI) / Diffuse (Lambert ... /Roughness) / Specular (Highlight, Phong/Blinn-Phong / Metalic).
+* - Normal Mapping.
+* - Render Target (Draw to texture).
+* - Shadow Mapping (Shadow Map).
+* - Environment Mapping (Sky Sphere(Box)).
+* - Study (Tone Mapping).
+* 
+* - Skeletal Mesh (Skinned Mesh) - Skeleton.
+*   - Skeletal Mesh Animation.
+* - Toy Project...
+* 
+* - Study (Physics).
+*/
+
+/*
+* IA(입력 정리) -> VS ... (Option) -> RS/보간기 -> PS -> OM(출력 조립).
+* - VS (정점 변환 Object -> World -> View -> Projection).
+* - PS (조명 처리) - PBR / 디퓨즈 / 스페큘러.
+* - 엔진 개발자 ( 옛날 렌더러(Renderer) 개발자를 지칭).
+* 
+*/
+
 #pragma region surplus
-
-
 
 //// 창에 관련된 메시지를 처리하는 콜백 함수.
 //LRESULT CALLBACK WindowProc(HWND handle, UINT message, WPARAM wparam, LPARAM lparam)
@@ -181,23 +212,23 @@ using namespace Blue;
 
 #pragma endregion
 
-#include "Core/Common.h"
-#include <typeinfo>
-#include "Shader/Shader.h"
-#include "Shader/TextureMappingShader.h"
-
-template<typename T, typename std::enable_if<std::is_base_of<Shader, T>::value>::type* = nullptr>
-void TestClass()
-{
-    std::boolalpha(std::cout);
-    std::cout << typeid(T).name() << "\n";
-    std::cout << std::is_base_of<Shader, T>::value << "\n";
-}
+//#include "Core/Common.h"
+//#include <typeinfo>
+//#include "Shader/Shader.h"
+//#include "Shader/TextureMappingShader.h"
+//
+//template<typename T, typename std::enable_if<std::is_base_of<Shader, T>::value>::type* = nullptr>
+//void TestClass()
+//{
+//    std::boolalpha(std::cout);
+//    std::cout << typeid(T).name() << "\n";
+//    std::cout << std::is_base_of<Shader, T>::value << "\n";
+//}
 
 
 int main()
 {
-    TestClass<TextureMappingShader>();
+    //TestClass<TextureMappingShader>();
 
 
     //std::cout << "테스트\n";
@@ -206,6 +237,7 @@ int main()
     
 
     Engine engine(1280, 800, TEXT("Title"), GetModuleHandle(nullptr));
+    engine.SetLevel(std::make_shared<DemoLevel>());
     engine.Run();
 
     // Vector2 테스트.

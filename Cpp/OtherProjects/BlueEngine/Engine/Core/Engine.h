@@ -20,6 +20,9 @@ namespace Blue
         // 엔진 실행 함수.
         void Run();
 
+        // 메인 레벨 설정 함수.
+        void SetLevel(std::shared_ptr<class Level> newLevel);
+
         // 싱글톤 접근함수.
         static Engine& Get();
 
@@ -42,6 +45,9 @@ namespace Blue
 
         // 모델 로더 객체
         std::unique_ptr<class ModelLoader> modelLoader;
+
+        // 메인 레벨.
+        std::shared_ptr<class Level> mainLevel;
 
         // 싱글톤 객체.
         static Engine* instance;

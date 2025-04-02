@@ -43,11 +43,11 @@ namespace Blue
             meshes.emplace_back(mesh);
         }
 
-        std::weak_ptr<TextureMappingShader> shader;
+        /*std::weak_ptr<TextureMappingShader> shader;
         if (ShaderLoader::Get().Load<TextureMappingShader>(shader, "T_coord.png"))
         {
             shaders.emplace_back(shader);
-        }
+        }*/
 
     }
     void QuadMesh::Update(float deltaTime)

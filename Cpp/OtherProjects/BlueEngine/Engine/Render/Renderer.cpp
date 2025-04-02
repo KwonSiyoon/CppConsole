@@ -6,7 +6,8 @@
 #include "TriangleMesh.h"
 #include "QuadMesh.h"
 #include "Core/Common.h"    
-
+#include "Level/Level.h"
+#include "Actor/Actor.h"
 
 namespace Blue
 {
@@ -264,41 +265,39 @@ namespace Blue
             device = nullptr;
         }
 
-        mesh.reset();
+        /*mesh.reset();
         mesh2.reset();
-        mesh3.reset();
+        mesh3.reset();*/
 
         /*debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL | D3D11_RLDO_IGNORE_INTERNAL);
         debug->Release();*/
 	}
-	void Renderer::Draw()
+	void Renderer::Draw(std::shared_ptr<Level> level)
 	{
 		// 쉐이더 객체 생성.
-		if (mesh == nullptr)
-		{
-			mesh = std::make_unique<QuadMesh>();
-			//mesh = std::make_unique<TriangleMesh>();
-            mesh->transform.scale = Vector3::One * 0.5f;
-            mesh->transform.position.x = 0.5f;
-		}
+		//if (mesh == nullptr)
+		//{
+		//	mesh = std::make_unique<QuadMesh>();
+		//	//mesh = std::make_unique<TriangleMesh>();
+  //          mesh->transform.scale = Vector3::One * 0.5f;
+  //          mesh->transform.position.x = 0.5f;
+		//}
 
-        if (mesh2 == nullptr)
-        {
-            mesh2 = std::make_unique<QuadMesh>();
-            //mesh = std::make_unique<TriangleMesh>();
-            mesh2->transform.scale = Vector3::One * 0.5f;
-            mesh2->transform.position.x = -0.5f;
+  //      if (mesh2 == nullptr)
+  //      {
+  //          mesh2 = std::make_unique<QuadMesh>();
+  //          //mesh = std::make_unique<TriangleMesh>();
+  //          mesh2->transform.scale = Vector3::One * 0.5f;
+  //          mesh2->transform.position.x = -0.5f;
+  //      }
 
-        }
-
-        if (mesh3 == nullptr)
-        {
-            mesh3 = std::make_unique<TriangleMesh>();
-            //mesh = std::make_unique<TriangleMesh>();
-            mesh3->transform.scale = Vector3::One * 0.5f;
-            //mesh3->transform.position.x = -0.5f;
-
-        }
+  //      if (mesh3 == nullptr)
+  //      {
+  //          mesh3 = std::make_unique<TriangleMesh>();
+  //          //mesh = std::make_unique<TriangleMesh>();
+  //          mesh3->transform.scale = Vector3::One * 0.5f;
+  //          //mesh3->transform.position.x = -0.5f;
+  //      }
 
 		// 그리기 전 작업. BeginScene
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
@@ -309,12 +308,36 @@ namespace Blue
 		context->ClearRenderTargetView(renderTargetView, color);
 
 		// @Test.
-		mesh->Update(1.0f / 60.0f);
-		mesh2->Update(1.0f / 60.0f);
+		/*mesh->Update(1.0f / 60.0f);
+		mesh2->Update(1.0f / 60.0f);*/
 
 		// 드로우(Draw). Draw
-		mesh->Draw();
-		mesh2->Draw();
+        if (level->GetCamera())
+        {
+            level->GetCamera()->Draw();
+        }
+
+
+        for (uint32 ix = 0; ix < level->ActorCount(); ix++)
+        {
+            // 액터 가져오기.
+            auto actor = level->GetActor(ix);
+
+            // Draw.
+            if (actor->IsActive())
+            {
+                //for (const auto& component : actor->components)
+                //{
+                //    // Check if component i drawable.
+                //}
+                actor->Draw();
+            }
+        }
+
+
+
+		/*mesh->Draw();
+		mesh2->Draw();*/
 		//mesh3->Draw();
 		
 		
