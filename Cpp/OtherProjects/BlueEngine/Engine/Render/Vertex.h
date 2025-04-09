@@ -8,8 +8,8 @@ namespace Blue
     class Vertex
     {
     public:
-        Vertex(const Vector3& position, const Vector3& color, const Vector2& texCoord)
-            : position(position), color(color), texCoord(texCoord)
+        Vertex(const Vector3& position, const Vector3& color, const Vector2& texCoord, const Vector3& normal)
+            : position(position), color(color), texCoord(texCoord), normal(normal)
         {
 
         }
@@ -20,6 +20,7 @@ namespace Blue
         Vector3 position;           // 정점의 위치.
         Vector3 color;              // 정점의 색상.
         Vector2 texCoord;           // 정점 기준 텍스쳐 좌표.
+        Vector3 normal;             // 노멀(법선) 벡터.
     };
 
 }
