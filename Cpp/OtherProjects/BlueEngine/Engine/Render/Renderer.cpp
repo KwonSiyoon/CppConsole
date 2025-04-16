@@ -119,6 +119,33 @@ namespace Blue
         backbuffer->Release();
         backbuffer = nullptr;
 
+        // 뎁스 스텐실 뷰 생성.
+        ID3D11Texture2D* depthStencilBuffer = nullptr;
+        D3D11_TEXTURE2D_DESC depthStencilDesc = {};
+        depthStencilDesc.Width = width;
+        depthStencilDesc.Height = height;
+        depthStencilDesc.MipLevels = 1;
+        depthStencilDesc.ArraySize = 1;
+        depthStencilDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+        depthStencilDesc.SampleDesc.Count = 1;
+        depthStencilDesc.SampleDesc.Quality = 0;
+        depthStencilDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+
+        // 2차원 리소스 생성.
+        ThrowIfFailed(device->CreateTexture2D(&depthStencilDesc, nullptr, &depthStencilBuffer), TEXT("Failed to create depth stencil buffer."));
+
+        D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc = {};
+        depthStencilViewDesc.Format = depthStencilDesc.Format;
+        depthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+
+        // 뷰 생성.
+        ThrowIfFailed(device->CreateDepthStencilView(depthStencilBuffer, &depthStencilViewDesc, &depthStencilView), TEXT("Failed to create depth stencil view."));
+
+        // 사용한 리소스 해제.
+        depthStencilBuffer->Release();
+        depthStencilBuffer = nullptr;
+
+
 		// 뷰포트(화면).
 		viewport.TopLeftX = 0.0f;
 		viewport.TopLeftY = 0.0f;
@@ -257,6 +284,12 @@ namespace Blue
             renderTargetView = nullptr;
         }
 
+        if (depthStencilView)
+        {
+            depthStencilView->Release();
+            depthStencilView = nullptr;
+        }
+
         //ID3D11Debug* debug = nullptr;
         //device->QueryInterface(IID_PPV_ARGS(&debug));
         if (device)
@@ -274,31 +307,6 @@ namespace Blue
 	}
 	void Renderer::Draw(std::shared_ptr<Level> level)
 	{
-		// 쉐이더 객체 생성.
-		//if (mesh == nullptr)
-		//{
-		//	mesh = std::make_unique<QuadMesh>();
-		//	//mesh = std::make_unique<TriangleMesh>();
-  //          mesh->transform.scale = Vector3::One * 0.5f;
-  //          mesh->transform.position.x = 0.5f;
-		//}
-
-  //      if (mesh2 == nullptr)
-  //      {
-  //          mesh2 = std::make_unique<QuadMesh>();
-  //          //mesh = std::make_unique<TriangleMesh>();
-  //          mesh2->transform.scale = Vector3::One * 0.5f;
-  //          mesh2->transform.position.x = -0.5f;
-  //      }
-
-  //      if (mesh3 == nullptr)
-  //      {
-  //          mesh3 = std::make_unique<TriangleMesh>();
-  //          //mesh = std::make_unique<TriangleMesh>();
-  //          mesh3->transform.scale = Vector3::One * 0.5f;
-  //          //mesh3->transform.position.x = -0.5f;
-  //      }
-
         // 화면 크기 변경 중일 때는 중단.
         if (isResizing)
         {
@@ -306,23 +314,20 @@ namespace Blue
         }
 
 		// 그리기 전 작업. BeginScene
-		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
-
+		context->OMSetRenderTargets(1, &renderTargetView, depthStencilView);
 
 		// 지우기(Clear)
 		float color[] = { 0.6f, 0.7f, 0.8f, 1.0f };
 		context->ClearRenderTargetView(renderTargetView, color);
+        context->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);         // memset 하는 것.
 
-		// @Test.
-		/*mesh->Update(1.0f / 60.0f);
-		mesh2->Update(1.0f / 60.0f);*/
 
 		// 드로우(Draw). Draw
+        // 카메라 바인딩.
         if (level->GetCamera())
         {
             level->GetCamera()->Draw();
         }
-
 
         for (uint32 ix = 0; ix < level->ActorCount(); ix++)
         {
@@ -340,14 +345,6 @@ namespace Blue
             }
         }
 
-
-
-		/*mesh->Draw();
-		mesh2->Draw();*/
-		//mesh3->Draw();
-		
-		
-		
 		// 리소스 바인딩.
 		// 정점 버퍼 전달.
 		//static unsigned int stride = Vector3::Stride();
@@ -398,6 +395,13 @@ namespace Blue
             renderTargetView = nullptr;
         }
 
+        // 뎁스 스텐실 뷰 해제.
+        if (depthStencilView)
+        {
+            depthStencilView->Release();
+            depthStencilView = nullptr;
+        }
+
         // 스왑체인 백버퍼 크기 변경.
         // BufferCount에 0을 넣으면 쓰고있던 개수를 자동으로 넣어줌.
         ThrowIfFailed(swapChain->ResizeBuffers(0, width, height, DXGI_FORMAT_B8G8R8A8_UNORM, 0), TEXT("Failed to resize swapchain buffer."));
@@ -408,6 +412,32 @@ namespace Blue
         ThrowIfFailed(device->CreateRenderTargetView(backbuffer, nullptr, &renderTargetView), TEXT("Failed to created render target view."));
         backbuffer->Release();
         backbuffer = nullptr;
+
+        // 뎁스 스텐실 뷰 생성.
+        ID3D11Texture2D* depthStencilBuffer = nullptr;
+        D3D11_TEXTURE2D_DESC depthStencilDesc = {};
+        depthStencilDesc.Width = width;
+        depthStencilDesc.Height = height;
+        depthStencilDesc.MipLevels = 1;
+        depthStencilDesc.ArraySize = 1;
+        depthStencilDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+        depthStencilDesc.SampleDesc.Count = 1;
+        depthStencilDesc.SampleDesc.Quality = 0;
+        depthStencilDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+
+        // 2차원 리소스 생성.
+        ThrowIfFailed(device->CreateTexture2D(&depthStencilDesc, nullptr, &depthStencilBuffer), TEXT("Failed to create depth stencil buffer."));
+
+        D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc = {};
+        depthStencilViewDesc.Format = depthStencilDesc.Format;
+        depthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+
+        // 뷰 생성.
+        ThrowIfFailed(device->CreateDepthStencilView(depthStencilBuffer, &depthStencilViewDesc, &depthStencilView), TEXT("Failed to create depth stencil view."));
+
+        // 사용한 리소스 해제.
+        depthStencilBuffer->Release();
+        depthStencilBuffer = nullptr;
 
         // 뷰포트 업데이트.
         // 뷰포트(화면).

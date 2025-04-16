@@ -85,6 +85,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Actor.cpp" />
+    <ClCompile Include="Actor\CameraActor.cpp" />
     <ClCompile Include="Actor\QuadActor.cpp" />
     <ClCompile Include="Component\CameraComponent.cpp" />
     <ClCompile Include="Component\Component.cpp" />
@@ -102,6 +103,7 @@
     <ClCompile Include="Render\Mesh.cpp" />
     <ClCompile Include="Render\Renderer.cpp" />
     <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Render\SphereMesh.cpp" />
     <ClCompile Include="Render\Texture.cpp" />
     <ClCompile Include="Resource\ModelLoader.cpp" />
     <ClCompile Include="Resource\TextureLoader.cpp" />
@@ -114,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Actor.h" />
+    <ClInclude Include="Actor\CameraActor.h" />
     <ClInclude Include="Actor\QuadActor.h" />
     <ClInclude Include="Component\CameraComponent.h" />
     <ClInclude Include="Component\Component.h" />
@@ -132,6 +135,7 @@
     <ClInclude Include="Render\Mesh.h" />
     <ClInclude Include="Render\Renderer.h" />
     <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Render\SphereMesh.h" />
     <ClInclude Include="Render\Texture.h" />
     <ClInclude Include="Resource\ModelLoader.h" />
     <ClInclude Include="Resource\ShaderLoader.h" />
@@ -160,6 +164,14 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
+    <FxCompile Include="HLSLShader\NormalMappingPixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSLShader\NormalMappingVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
     <FxCompile Include="HLSLShader\TextureMappingPixelShader.hlsl">
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\CompiledShader\%(Filename).cso</ObjectFileOutput>
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\CompiledShader\%(Filename).cso</ObjectFileOutput>
@@ -178,6 +190,7 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="HLSLShader\Common.hlsli" />
     <None Include="Resource\ShaderLoader.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

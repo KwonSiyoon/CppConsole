@@ -2,6 +2,7 @@
 
 #include "Actor/Actor.h"
 #include "Actor/QuadActor.h"
+#include "Actor/CameraActor.h"
 
 #include "Render/QuadMesh.h"
 
@@ -25,6 +26,10 @@ namespace Blue
         actor->transform.position.x = 0.5f;
         actor->transform.scale = Vector3::One * 0.5f;
 
+        std::shared_ptr<QuadActor> actor2 = std::make_shared<QuadActor>();
+        actor2->transform.position.x = -0.5f;
+        actor2->transform.scale = Vector3::One * 0.5f;
+
         //// 스태틱 메시 컴포넌트 생성.
         //std::shared_ptr<StaticMeshComponent> meshComponent = std::make_shared<StaticMeshComponent>();
         //// 액터에 컴포넌트 추가.
@@ -38,11 +43,14 @@ namespace Blue
         //}
         
         // 카메라 액터 생성.
-        std::shared_ptr<Actor> cameraActor = std::make_shared<Actor>();
-        cameraActor->AddComponent(std::make_shared<CameraComponent>());
+        //std::shared_ptr<Actor> cameraActor = std::make_shared<Actor>();
+        //cameraActor->AddComponent(std::make_shared<CameraComponent>());
+        std::shared_ptr<CameraActor> cameraActor = std::make_shared<CameraActor>();
+        cameraActor->transform.position.z = -2.0f;
 
 
         // 액터를 레벨에 추가.
+        AddActor(actor2);
         AddActor(actor);
         AddActor(cameraActor);
     }

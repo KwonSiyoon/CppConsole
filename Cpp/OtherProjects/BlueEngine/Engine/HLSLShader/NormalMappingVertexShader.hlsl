@@ -22,7 +22,7 @@ cbuffer Camera : register(b1)
     matrix view;
     matrix projection;
     float3 cameraPosition;
-    float padding;      // for Making 16byte.
+    float padding; // for Making 16byte.
 };
 
 struct VertexOutput

@@ -21,6 +21,8 @@ namespace Blue
         Vector3 color;              // 정점의 색상.
         Vector2 texCoord;           // 정점 기준 텍스쳐 좌표.
         Vector3 normal;             // 노멀(법선) 벡터.
+        Vector3 tangent;            // 탄젠트(tangent) 벡터.
+        Vector3 bitangent;          // 바이탄젠트 (bitangent) 벡터.
     };
 
 }

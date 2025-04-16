@@ -71,4 +71,22 @@ namespace Blue
         context.VSSetConstantBuffers(0u, 1u, &constantBuffer);
 
     }
+    Vector3 Transform::Forward()
+    {
+        // 로컬 기준 앞쪽 방향 벡터 구하기.
+        // 월드 기준 앞쪽 방향 벡터를 로컬의 방향만큼 회전 적용.
+        return Vector3::Forward* Matrix4::Rotation(rotation);
+    }
+    Vector3 Transform::Right()
+    {
+        // 로컬 기준 오른쪽 방향 벡터 구하기.
+        // 월드 기준 오른쪽 방향 벡터를 로컬의 방향만큼 회전 적용.
+        return Vector3::Right * Matrix4::Rotation(rotation);
+    }
+    Vector3 Transform::Up()
+    {
+        // 로컬 기준 위쪽 방향 벡터 구하기.
+        // 월드 기준 위쪽 방향 벡터를 로컬의 방향만큼 회전 적용.
+        return Vector3::Up* Matrix4::Rotation(rotation);
+    }
 }
