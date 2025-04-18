@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="DFS_BFS\BFS.cpp" />
     <ClCompile Include="DFS_BFS\DFS.cpp" />
+    <ClCompile Include="Graph\GraphTest.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DFS_BFS\BFS.h" />
     <ClInclude Include="DFS_BFS\DFS.h" />
+    <ClInclude Include="Graph\GraphTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

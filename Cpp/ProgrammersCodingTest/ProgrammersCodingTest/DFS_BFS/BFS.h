@@ -10,6 +10,7 @@ class BFS
 public:
     BFS();
     ~BFS();
-    int BinarySearchSolution(std::vector<int> numbers, int target);
+    int SearchSolution(std::vector<int> numbers, int target);
+    long long BinarySearchSolution(int n, std::vector<int> times);
     
 };

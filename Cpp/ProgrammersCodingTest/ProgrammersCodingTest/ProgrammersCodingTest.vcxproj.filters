@@ -24,12 +24,18 @@
     <ClCompile Include="DFS_BFS\BFS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Graph\GraphTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DFS_BFS\DFS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DFS_BFS\BFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\GraphTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

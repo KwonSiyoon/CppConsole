@@ -8,7 +8,7 @@ BFS::~BFS()
 {
 }
 
-int BFS::solution(std::vector<int> numbers, int target)
+int BFS::SearchSolution(std::vector<int> numbers, int target)
 {
     std::queue<std::pair<int, int>> q;
     q.push({ 0, 0 }); // 초기값 (합, 인덱스)
@@ -35,7 +35,7 @@ int BFS::solution(std::vector<int> numbers, int target)
 }
 
 // 입국심사 이분탐색.
-long long BinarySearchSolution(int n, std::vector<int> times)
+long long BFS::BinarySearchSolution(int n, std::vector<int> times)
 {
     int maxTime = times[0];
     for (int i = 1; i < times.size(); ++i)
