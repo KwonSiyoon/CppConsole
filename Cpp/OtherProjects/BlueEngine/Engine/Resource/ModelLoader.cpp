@@ -151,7 +151,7 @@ namespace Blue
 		return true;
 	}
 
-	ModelLoader& ModelLoader::Get()
+	ModelLoader& ModelLoader::Get() 
 	{
 		return *instance;
 	}

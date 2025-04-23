@@ -11,7 +11,7 @@ namespace Blue
     {
     }
     Texture::Texture(const std::string& name, BindType bindType, uint32 index)
-        : name(name), bindType(bindType), index(index)
+        : name(name), bindType(bindType)/*, index(index)*/
     {
         LoadTexture(name);
     }
@@ -19,7 +19,7 @@ namespace Blue
     {
         textureData.reset();
     }
-    void Texture::Bind()
+    void Texture::Bind(uint32 index)
     {
         // 예외 처리.
         if (!textureData)

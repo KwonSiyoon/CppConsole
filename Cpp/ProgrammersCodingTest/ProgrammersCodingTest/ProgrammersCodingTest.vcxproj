@@ -129,18 +129,23 @@
   <ItemGroup>
     <ClCompile Include="DFS_BFS\BFS.cpp" />
     <ClCompile Include="DFS_BFS\DFS.cpp" />
+    <ClCompile Include="FullSearch\FullSearchTest.cpp" />
     <ClCompile Include="Graph\GraphTest.cpp" />
     <ClCompile Include="Heap\HeapTest.cpp" />
     <ClCompile Include="KeyValue\HashTest.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sort\SortTest.cpp" />
     <ClCompile Include="StackQueue\StackQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DFS_BFS\BFS.h" />
     <ClInclude Include="DFS_BFS\DFS.h" />
+    <ClInclude Include="FullSearch\FullSearchTest.h" />
     <ClInclude Include="Graph\GraphTest.h" />
+    <ClInclude Include="Greedy\GreedyTest.h" />
     <ClInclude Include="Heap\HeapTest.h" />
     <ClInclude Include="KeyValue\HashTest.h" />
+    <ClInclude Include="Sort\SortTest.h" />
     <ClInclude Include="StackQueue\StackQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
