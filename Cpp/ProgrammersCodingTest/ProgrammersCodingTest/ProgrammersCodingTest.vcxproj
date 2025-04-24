@@ -131,6 +131,7 @@
     <ClCompile Include="DFS_BFS\DFS.cpp" />
     <ClCompile Include="FullSearch\FullSearchTest.cpp" />
     <ClCompile Include="Graph\GraphTest.cpp" />
+    <ClCompile Include="Greedy\GreedyTest.cpp" />
     <ClCompile Include="Heap\HeapTest.cpp" />
     <ClCompile Include="KeyValue\HashTest.cpp" />
     <ClCompile Include="Main.cpp" />
