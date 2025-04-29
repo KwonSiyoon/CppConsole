@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="DFS_BFS\BFS.cpp" />
     <ClCompile Include="DFS_BFS\DFS.cpp" />
+    <ClCompile Include="DynamicProgramming\DynamicProgrammingTest.cpp" />
     <ClCompile Include="FullSearch\FullSearchTest.cpp" />
     <ClCompile Include="Graph\GraphTest.cpp" />
     <ClCompile Include="Greedy\GreedyTest.cpp" />
@@ -141,6 +142,7 @@
   <ItemGroup>
     <ClInclude Include="DFS_BFS\BFS.h" />
     <ClInclude Include="DFS_BFS\DFS.h" />
+    <ClInclude Include="DynamicProgramming\DynamicProgrammingTest.h" />
     <ClInclude Include="FullSearch\FullSearchTest.h" />
     <ClInclude Include="Graph\GraphTest.h" />
     <ClInclude Include="Greedy\GreedyTest.h" />
