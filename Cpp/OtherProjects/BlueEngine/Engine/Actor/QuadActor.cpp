@@ -1,6 +1,6 @@
 ﻿#include "QuadActor.h"
 
-#include "Component/StaticMeahComponent.h"
+#include "Component/StaticMeshComponent.h"
 #include "Render/QuadMesh.h"
 #include "Render/SphereMesh.h"
 
@@ -10,6 +10,8 @@
 #include "Resource/ShaderLoader.h"
 #include "Resource/TextureLoader.h"
 #include "Render/Texture.h"
+#include "Render/RenderTexture.h"
+
 
 namespace Blue
 {
@@ -22,23 +24,18 @@ namespace Blue
         AddComponent(meshComponent);
 
         // 리소스 로드 및 컴포넌트 설정. 
-        //meshComponent->SetMesh(std::make_shared<QuadMesh>());
-        meshComponent->SetMesh(std::make_shared<SphereMesh>());
-        std::weak_ptr<NormalMappingShader> shader;
-        if (ShaderLoader::Get().Load<NormalMappingShader>(shader))
+        //meshComponent->SetMesh(std::make_shared<SphereMesh>());
+        meshComponent->SetMesh(std::make_shared<QuadMesh>());
+        std::weak_ptr<TextureMappingShader> shader;
+        if (ShaderLoader::Get().Load<TextureMappingShader>(shader))
         {
             meshComponent->AddShader(shader);
         }
 
         // 텍스처 로드 및 셰이더 설정.
-        std::weak_ptr<Texture> diffuseMap;
-        TextureLoader::Get().Load("5k_earth_day_map.png", diffuseMap);
-        shader.lock()->SetTexture(NormalMappingShader::ETextureBindType::Diffuse,diffuseMap);
-
-        // 텍스처 로드 및 셰이더 설정.
-        std::weak_ptr<Texture> normalMap;
-        TextureLoader::Get().Load("8k_earth_normal_map.png", normalMap);
-        shader.lock()->SetTexture(NormalMappingShader::ETextureBindType::NormalMap, normalMap);
+        std::weak_ptr<RenderTexture> renderTexture;
+        TextureLoader::Get().GetNewRenderTexture(renderTexture, 1280, 800);
+        shader.lock()->SetTexture(renderTexture);
 
 
     }
@@ -46,7 +43,7 @@ namespace Blue
     void QuadActor::Tick(float deltaTime)
     {
         Actor::Tick(deltaTime);
-        transform.rotation += Vector3(0.0f, 10.0f, 0.0f) * deltaTime;
+        //transform.rotation += Vector3(0.0f, 10.0f, 0.0f) * deltaTime;
     }
     
 }

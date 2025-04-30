@@ -81,7 +81,7 @@
     <ClCompile Include="Level\Level.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Component\StaticMeahComponent.cpp">
+    <ClCompile Include="Component\StaticMeshComponent.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Level\DemoLevel.cpp">
@@ -103,6 +103,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Shader\NormalMappingShader.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\RenderTexture.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\SphereActor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -179,7 +185,7 @@
     <ClInclude Include="Level\Level.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Component\StaticMeahComponent.h">
+    <ClInclude Include="Component\StaticMeshComponent.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Level\DemoLevel.h">
@@ -201,6 +207,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Shader\NormalMappingShader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\RenderTexture.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\SphereActor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

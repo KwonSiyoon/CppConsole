@@ -2,6 +2,7 @@
 
 #include "Actor/Actor.h"
 #include "Actor/QuadActor.h"
+#include "Actor/SphereActor.h"
 #include "Actor/CameraActor.h"
 
 #include "Render/QuadMesh.h"
@@ -12,7 +13,7 @@
 
 #include "Shader/TextureMappingShader.h"
 
-#include "Component/StaticMeahComponent.h"
+#include "Component/StaticMeshComponent.h"
 #include "Component/CameraComponent.h"
 
 namespace Blue
@@ -22,13 +23,17 @@ namespace Blue
         // 데모 씬 구성.
 
         // 액터 생성.
-        std::shared_ptr<QuadActor> actor = std::make_shared<QuadActor>();
-        actor->transform.position.x = 0.5f;
-        actor->transform.scale = Vector3::One * 0.5f;
+        std::shared_ptr<QuadActor> quadActor = std::make_shared<QuadActor>();
+        quadActor->transform.position.x = 0.5f;
+        quadActor->transform.scale = Vector3::One * 0.5f;
 
-        std::shared_ptr<QuadActor> actor2 = std::make_shared<QuadActor>();
-        actor2->transform.position.x = -0.5f;
-        actor2->transform.scale = Vector3::One * 0.5f;
+        std::shared_ptr<QuadActor> quadActor2 = std::make_shared<QuadActor>();
+        quadActor2->transform.position.x = 1.5f;
+        quadActor2->transform.scale = Vector3::One * 0.5f;
+
+        std::shared_ptr<SphereActor> sphereActor = std::make_shared<SphereActor>();
+        sphereActor->transform.position.x = -0.5f;
+        sphereActor->transform.scale = Vector3::One * 0.5f;
 
         //// 스태틱 메시 컴포넌트 생성.
         //std::shared_ptr<StaticMeshComponent> meshComponent = std::make_shared<StaticMeshComponent>();
@@ -50,8 +55,9 @@ namespace Blue
 
 
         // 액터를 레벨에 추가.
-        //AddActor(actor2);
-        AddActor(actor);
+        AddActor(quadActor);
+        AddActor(quadActor2);
+        AddActor(sphereActor);
         AddActor(cameraActor);
     }
     DemoLevel::~DemoLevel()

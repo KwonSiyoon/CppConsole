@@ -1,4 +1,4 @@
-﻿#include "StaticMeahComponent.h"
+﻿#include "StaticMeshComponent.h"
 #include "Render/Mesh.h"
 #include "Shader/Shader.h"
 #include "Core/Engine.h"
@@ -48,5 +48,17 @@ namespace Blue
     void StaticMeshComponent::AddShader(std::weak_ptr<Shader> newShader)
     {
         shaders.emplace_back(newShader);
+    }
+    bool StaticMeshComponent::UseRenderTexture()
+    {
+        // 사용 중인 셰이더에서 렌더 텍스처를 사용중인지 검사.
+        for (auto const& shader : shaders)
+        {
+            if (shader.lock() && shader.lock()->UseRenderTexture())
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

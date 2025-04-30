@@ -7,13 +7,16 @@
 #include <iostream>
 
 //#include "Math/Vector2.h"
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+
 
 using namespace Blue;
 
 /*
 * Done List
 * - Actor(Entity/GameObject) / Component / Scene(Level).
-* Todo List
 * - Input Controller (Window Message Process).
 * - FBX Loader (Assimp/FBX SDK -> Submesh).
 * - Camera (View / Projection(Perspective/Orthographic)).
@@ -21,6 +24,8 @@ using namespace Blue;
 * - Shade (Shader) (Light / Brightness / Darkness).
 *   - Ambient(Static/GI) / Diffuse (Lambert ... /Roughness) / Specular (Highlight, Phong/Blinn-Phong / Metalic).
 * - Normal Mapping.
+* 
+* Todo List
 * - Render Target (Draw to texture).
 * - Shadow Mapping (Shadow Map).
 * - Environment Mapping (Sky Sphere(Box)).
@@ -228,13 +233,13 @@ using namespace Blue;
 
 int main()
 {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     //TestClass<TextureMappingShader>();
 
 
     //std::cout << "테스트\n";
     
     //ThrowIfFailed(E_FAIL, TEXT("Text"));
-    
 
     Engine engine(1280, 800, TEXT("Title"), GetModuleHandle(nullptr));
     engine.SetLevel(std::make_shared<DemoLevel>());
