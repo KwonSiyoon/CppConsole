@@ -1,6 +1,6 @@
 ﻿#include "StackQueue.h"
 
-
+using namespace std;
 std::vector<int> StackQueue::DevelopFunctionSolution(std::vector<int> progresses, std::vector<int> speeds)
 {
     std::vector<int> answer;
@@ -32,5 +32,18 @@ std::vector<int> StackQueue::DevelopFunctionSolution(std::vector<int> progresses
 
         answer.push_back(count);
     }
+    return answer;
+}
+
+int NetworkSolution(int n, vector<vector<int>> computers)
+{
+    int answer = 0;
+
+    queue<pair<int,int>> q;
+    for (int i = 0; i < n; ++i)
+    {
+        q.emplace(pair<int, int>(0, i));
+    }
+
     return answer;
 }
