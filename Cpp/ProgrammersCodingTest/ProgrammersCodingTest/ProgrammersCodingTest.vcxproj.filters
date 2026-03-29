@@ -48,6 +48,9 @@
     <ClCompile Include="DynamicProgramming\DynamicProgrammingTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="String\StringTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DFS_BFS\DFS.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DynamicProgramming\DynamicProgrammingTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="String\StringTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
